@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Description>Offline deterministic MDX/MDD fixture generator for remediation testing.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\VDict.Infrastructure\VDict.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VDict.WinUI</RootNamespace>
+    <AssemblyName>VDict</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <Configurations>Debug;Release;Portable</Configurations>
+    <PublishSingleFile>false</PublishSingleFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+    <AppxSymbolPackageEnabled>false</AppxSymbolPackageEnabled>
+    <GenerateAppInstallerFile>false</GenerateAppInstallerFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Portable'">
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ProjectPriFileName>resources.pri</ProjectPriFileName>
+    <ProjectPriIndexName>Application</ProjectPriIndexName>
+    <DefineConstants>$(DefineConstants);PORTABLE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' != 'Portable'">
+    <WindowsPackageType>MSIX</WindowsPackageType>
+    <WindowsAppSDKSelfContained>false</WindowsAppSDKSelfContained>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release' Or '$(Configuration)' == 'Portable'">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VDict.Infrastructure\VDict.Infrastructure.csproj" />
+    <ProjectReference Include="..\VDict.Presentation\VDict.Presentation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Web.WebView2" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\app.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\logo_round.png" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\logo_rect.png" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\Scripts\darkreader.js" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\Scripts\darkreader.LICENSE.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\Styles\dark-mode-overrides.css" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' != 'Debug'">
+    <Page Remove="Diagnostics\DebugTimelineWindow.xaml" />
+    <Compile Remove="Diagnostics\DebugTimelineWindow.xaml.cs" />
+    <Compile Remove="Diagnostics\DebugTimelineWindowController.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+<UserControl
+    x:Class="VDict.WinUI.Controls.ReaderWebViewHost"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    HorizontalAlignment="Stretch"
+    VerticalAlignment="Stretch">
+  <Grid x:Name="Root">
+    <Grid
+        x:Name="ReaderSurface"
+        x:Uid="ReaderHost_ReaderSurface"
+        Background="Transparent"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch">
+      <WebView2
+          x:Name="BrowserSurface"
+          HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch" />
+    </Grid>
+    <Grid
+        x:Name="RuntimeError"
+        Visibility="Collapsed"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+      <StackPanel
+          Width="520"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+          Spacing="16">
+        <FontIcon Glyph="&#xE783;" FontSize="42" />
+        <TextBlock
+            x:Uid="ReaderHost_RuntimeErrorTitle"
+            FontSize="24"
+            FontWeight="SemiBold"
+            TextAlignment="Center" />
+        <TextBlock
+            x:Name="RuntimeErrorText"
+            x:Uid="ReaderHost_RuntimeErrorText"
+            TextAlignment="Center"
+            TextWrapping="Wrap" />
+        <StackPanel
+            HorizontalAlignment="Center"
+            Orientation="Horizontal"
+            Spacing="8">
+          <Button x:Uid="ReaderHost_InstallRuntimeButton" Click="InstallRuntime_Click" />
+          <Button x:Uid="ReaderHost_RetryButton" Click="RetryRuntime_Click" />
+        </StackPanel>
+      </StackPanel>
+    </Grid>
+  </Grid>
+</UserControl>

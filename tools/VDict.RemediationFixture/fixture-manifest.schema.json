@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vdict.invalid/schemas/remediation-fixture-manifest-0a.json",
+  "title": "VDict remediation fixture manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "fixture_id",
+    "generator_version",
+    "container_format",
+    "semantic_sha256",
+    "entries",
+    "resources",
+    "files"
+  ],
+  "properties": {
+    "fixture_id": { "const": "vdict-remediation-0a" },
+    "generator_version": { "type": "string", "minLength": 1 },
+    "container_format": { "type": "string", "minLength": 1 },
+    "semantic_sha256": { "$ref": "#/$defs/sha256" },
+    "entries": {
+      "type": "array",
+      "minItems": 13,
+      "items": { "$ref": "#/$defs/entry" }
+    },
+    "resources": {
+      "type": "array",
+      "minItems": 12,
+      "items": { "$ref": "#/$defs/resource" }
+    },
+    "files": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/file" }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "query",
+        "ordinal",
+        "marker",
+        "body_sha256",
+        "features",
+        "expected"
+      ],
+      "properties": {
+        "query": { "type": "string", "minLength": 1 },
+        "ordinal": { "type": "integer", "minimum": 0 },
+        "marker": { "type": "string", "minLength": 1 },
+        "body_sha256": { "$ref": "#/$defs/sha256" },
+        "features": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "expected": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "resource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "logical_path",
+        "source",
+        "mime",
+        "length",
+        "sha256"
+      ],
+      "properties": {
+        "logical_path": { "type": "string", "minLength": 1 },
+        "source": { "enum": ["local", "mdd"] },
+        "mime": { "type": "string", "minLength": 1 },
+        "length": { "type": "integer", "minimum": 0 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "length", "sha256"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "length": { "type": "integer", "minimum": 0 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    }
+  }
+}

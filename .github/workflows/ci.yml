@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+      DOTNET_NOLOGO: "1"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore and audit dependencies
+        run: dotnet restore VDict.sln -p:NuGetAudit=true -p:NuGetAuditMode=all
+
+      - name: Build
+        run: dotnet build VDict.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test VDict.sln --configuration Release --no-build --logger trx --results-directory TestResults
+
+      - name: Validate localization resources
+        shell: pwsh
+        run: ./build/Test-LocalizationResources.ps1
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: TestResults/**/*.trx
+          if-no-files-found: ignore
+          retention-days: 14

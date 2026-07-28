@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <data name="AppDescription" xml:space="preserve"><value>Modern MDX/MDD dictionary reader</value></data>
+
+  <data name="MainWindow_AppTitleBar.AutomationProperties.Name" xml:space="preserve"><value>Title bar</value></data>
+  <data name="MainWindow_SearchToolbar.AutomationProperties.Name" xml:space="preserve"><value>Search bar</value></data>
+  <data name="MainWindow_BackButton.AutomationProperties.Name" xml:space="preserve"><value>Back</value></data>
+  <data name="MainWindow_BackButton.ToolTipService.ToolTip" xml:space="preserve"><value>Back</value></data>
+  <data name="MainWindow_ForwardButton.AutomationProperties.Name" xml:space="preserve"><value>Forward</value></data>
+  <data name="MainWindow_ForwardButton.ToolTipService.ToolTip" xml:space="preserve"><value>Forward</value></data>
+  <data name="MainWindow_SearchBox.AutomationProperties.Name" xml:space="preserve"><value>Lookup term</value></data>
+  <data name="MainWindow_SearchBox.PlaceholderText" xml:space="preserve"><value>Enter a word to look up</value></data>
+  <data name="MainWindow_SearchButton.AutomationProperties.Name" xml:space="preserve"><value>Look up</value></data>
+  <data name="MainWindow_SearchButton.ToolTipService.ToolTip" xml:space="preserve"><value>Look up</value></data>
+  <data name="MainWindow_SettingsButton.AutomationProperties.Name" xml:space="preserve"><value>Settings</value></data>
+  <data name="MainWindow_SettingsButton.Content" xml:space="preserve"><value>Settings</value></data>
+  <data name="MainWindow_CandidatePane.AutomationProperties.Name" xml:space="preserve"><value>Candidate pane</value></data>
+  <data name="MainWindow_DictionariesHeading.Text" xml:space="preserve"><value>Dictionaries</value></data>
+  <data name="MainWindow_DictionarySelector.AutomationProperties.Name" xml:space="preserve"><value>Dictionaries</value></data>
+  <data name="MainWindow_CandidatesHeading.Text" xml:space="preserve"><value>Candidate words</value></data>
+  <data name="MainWindow_CandidateList.AutomationProperties.Name" xml:space="preserve"><value>Candidate words</value></data>
+  <data name="MainWindow_CandidateDivider.AutomationProperties.Name" xml:space="preserve"><value>Candidate pane divider</value></data>
+  <data name="MainWindow_CandidateDivider.AutomationProperties.HelpText" xml:space="preserve"><value>Drag or use the Left and Right arrow keys to resize the candidate pane</value></data>
+  <data name="MainWindow_CandidateDivider.ToolTipService.ToolTip" xml:space="preserve"><value>Drag or use the Left and Right arrow keys to resize the left pane</value></data>
+  <data name="MainWindow_ReaderCard.AutomationProperties.Name" xml:space="preserve"><value>Dictionary content</value></data>
+  <data name="MainWindow_StatusBar.AutomationProperties.Name" xml:space="preserve"><value>Status bar</value></data>
+  <data name="MainWindow_ZoomOutButton.AutomationProperties.Name" xml:space="preserve"><value>Zoom out dictionary content</value></data>
+  <data name="MainWindow_ZoomOutButton.ToolTipService.ToolTip" xml:space="preserve"><value>Zoom out (Ctrl+-)</value></data>
+  <data name="MainWindow_ZoomInButton.AutomationProperties.Name" xml:space="preserve"><value>Zoom in dictionary content</value></data>
+  <data name="MainWindow_ZoomInButton.ToolTipService.ToolTip" xml:space="preserve"><value>Zoom in (Ctrl++)</value></data>
+  <data name="MainWindow_ZoomResetButton.AutomationProperties.Name" xml:space="preserve"><value>Reset dictionary content zoom</value></data>
+  <data name="MainWindow_ZoomResetButton.ToolTipService.ToolTip" xml:space="preserve"><value>Reset zoom to 100% (Ctrl+0)</value></data>
+
+  <data name="ReaderHost_ReaderSurface.AutomationProperties.Name" xml:space="preserve"><value>Dictionary content</value></data>
+  <data name="ReaderHost_RuntimeErrorTitle.Text" xml:space="preserve"><value>Dictionary content is temporarily unavailable</value></data>
+  <data name="ReaderHost_RuntimeErrorText.Text" xml:space="preserve"><value>VDict uses Microsoft Edge WebView2 to display dictionary content. Try again; if the runtime is missing, installation instructions will be shown.</value></data>
+  <data name="ReaderHost_InstallRuntimeButton.Content" xml:space="preserve"><value>WebView2 installation instructions</value></data>
+  <data name="ReaderHost_RetryButton.Content" xml:space="preserve"><value>Try again</value></data>
+  <data name="ReaderHost_ContextMenu_LookupSelection" xml:space="preserve"><value>Look up selected text</value></data>
+  <data name="ReaderHost_Status_NavigationBlocked" xml:space="preserve"><value>Dictionary content navigation was blocked.</value></data>
+  <data name="ReaderHost_Status_NewWindowBlocked" xml:space="preserve"><value>The dictionary was prevented from opening a new window.</value></data>
+  <data name="ReaderHost_Status_FrameNavigationBlocked" xml:space="preserve"><value>Dictionary content frame navigation was blocked.</value></data>
+  <data name="ReaderHost_Status_ResourceFailed" xml:space="preserve"><value>A dictionary resource could not be loaded.</value></data>
+  <data name="ReaderHost_Status_DownloadSessionInvalid" xml:space="preserve"><value>Download blocked: the content session is no longer valid.</value></data>
+  <data name="ReaderHost_Status_DownloadNetworkBlocked" xml:space="preserve"><value>Download blocked: this dictionary cannot access the remote network.</value></data>
+  <data name="ReaderHost_Status_DownloadPendingAction" xml:space="preserve"><value>Download blocked: another content action is awaiting confirmation.</value></data>
+  <data name="ReaderHost_Download_Title" xml:space="preserve"><value>Allow this dictionary to download a file?</value></data>
+  <data name="ReaderHost_Download_Message" xml:space="preserve"><value>Source: {0}&#x0A;File: {1}</value></data>
+  <data name="ReaderHost_Download_ChooseLocation" xml:space="preserve"><value>Choose save location</value></data>
+  <data name="ReaderHost_Download_FileType" xml:space="preserve"><value>Downloaded file</value></data>
+  <data name="ReaderHost_Status_DownloadCanceled" xml:space="preserve"><value>The download was canceled.</value></data>
+  <data name="ReaderHost_Status_DownloadSessionChanged" xml:space="preserve"><value>Download blocked: the content session changed.</value></data>
+  <data name="ReaderHost_Status_DownloadingTo" xml:space="preserve"><value>Downloading to {0}</value></data>
+  <data name="ReaderHost_Status_DownloadFailed" xml:space="preserve"><value>The download could not be started.</value></data>
+  <data name="ReaderHost_Status_MessageFailed" xml:space="preserve"><value>A dictionary content action could not be completed.</value></data>
+  <data name="ReaderHost_Status_GpuRecovered" xml:space="preserve"><value>The WebView2 GPU process restarted. Dictionary content is using the system fallback.</value></data>
+  <data name="ReaderHost_Status_ProcessRecovering" xml:space="preserve"><value>The WebView2 process stopped unexpectedly. Restoring dictionary content…</value></data>
+  <data name="ReaderHost_Status_LinkUntrusted" xml:space="preserve"><value>External link blocked: no trusted user action was detected.</value></data>
+  <data name="ReaderHost_Status_LinkPendingAction" xml:space="preserve"><value>External link blocked: another content action is awaiting confirmation.</value></data>
+  <data name="ReaderHost_Status_LinkActivationInvalid" xml:space="preserve"><value>External link blocked: the user activation is no longer valid.</value></data>
+  <data name="ReaderHost_Link_Title" xml:space="preserve"><value>Open this external link in the system browser?</value></data>
+  <data name="ReaderHost_Link_Message" xml:space="preserve"><value>Destination: {0}</value></data>
+  <data name="ReaderHost_Link_Open" xml:space="preserve"><value>Open</value></data>
+  <data name="ReaderHost_Status_LinkCanceled" xml:space="preserve"><value>Opening the external link was canceled.</value></data>
+  <data name="ReaderHost_Status_LinkFailed" xml:space="preserve"><value>The external link could not be opened.</value></data>
+  <data name="ReaderHost_RuntimeMissing" xml:space="preserve"><value>VDict uses Microsoft Edge WebView2 to display dictionary content. Install the Evergreen WebView2 Runtime, then try again.</value></data>
+  <data name="ReaderHost_ContentUnavailable" xml:space="preserve"><value>Dictionary content is temporarily unavailable. Try again; lookup and candidate words are still available.</value></data>
+  <data name="Reader_Candidates_EnterWord" xml:space="preserve"><value>Enter a word to see candidates.</value></data>
+  <data name="Reader_Candidates_Searching" xml:space="preserve"><value>Finding candidate words…</value></data>
+  <data name="Reader_Candidates_NoMatch" xml:space="preserve"><value>No matching candidate words.</value></data>
+  <data name="Reader_Candidates_FailedHint" xml:space="preserve"><value>Candidate words could not be loaded. Keep typing or try again.</value></data>
+  <data name="Reader_Candidates_Failed" xml:space="preserve"><value>Candidate words could not be loaded.</value></data>
+  <data name="Reader_Lookup_Searching" xml:space="preserve"><value>Looking up…</value></data>
+  <data name="Reader_Lookup_Failed" xml:space="preserve"><value>The lookup failed. Try again.</value></data>
+  <data name="Reader_Lookup_NotFound" xml:space="preserve"><value>“{0}” was not found.</value></data>
+  <data name="Reader_Lookup_FoundOne" xml:space="preserve"><value>Found a result in 1 dictionary.</value></data>
+  <data name="Reader_Lookup_FoundMany" xml:space="preserve"><value>Found results in {0} dictionaries.</value></data>
+  <data name="Reader_NotFound_Title" xml:space="preserve"><value>Entry not found</value></data>
+  <data name="Reader_NotFound_Prefix" xml:space="preserve"><value>No dictionary contains </value></data>
+  <data name="Reader_NotFound_Suffix" xml:space="preserve"><value>. Check the spelling or try another keyword.</value></data>
+  <data name="Reader_Path_Current" xml:space="preserve"><value>Current entry: {0}</value></data>
+  <data name="Reader_Path_Item" xml:space="preserve"><value>Go to path item {0}: {1}</value></data>
+  <data name="Reader_Catalog_Ready" xml:space="preserve"><value>Ready.</value></data>
+  <data name="Reader_Dictionaries_NoneEnabled" xml:space="preserve"><value>No dictionaries are enabled.</value></data>
+  <data name="Reader_Dictionaries_EnableInSettings" xml:space="preserve"><value>Enable or add a dictionary in Settings.</value></data>
+  <data name="Reader_Zoom_SaveFailed" xml:space="preserve"><value>The zoom setting could not be saved.</value></data>
+
+  <data name="SettingsWindow.Title" xml:space="preserve"><value>VDict Settings</value></data>
+  <data name="SettingsWindow_PaneTitle.Text" xml:space="preserve"><value>VDict Settings</value></data>
+  <data name="SettingsWindow_DictionariesItem.Content" xml:space="preserve"><value>Dictionaries</value></data>
+  <data name="SettingsWindow_DictionariesItem.AutomationProperties.Name" xml:space="preserve"><value>Dictionaries</value></data>
+  <data name="SettingsWindow_ReadingItem.Content" xml:space="preserve"><value>Reading &amp; appearance</value></data>
+  <data name="SettingsWindow_ReadingItem.AutomationProperties.Name" xml:space="preserve"><value>Reading and appearance</value></data>
+  <data name="SettingsWindow_SecurityItem.Content" xml:space="preserve"><value>Security &amp; compatibility</value></data>
+  <data name="SettingsWindow_SecurityItem.AutomationProperties.Name" xml:space="preserve"><value>Security and compatibility</value></data>
+  <data name="SettingsWindow_DataItem.Content" xml:space="preserve"><value>Data &amp; maintenance</value></data>
+  <data name="SettingsWindow_DataItem.AutomationProperties.Name" xml:space="preserve"><value>Data and maintenance</value></data>
+  <data name="SettingsWindow_AboutItem.Content" xml:space="preserve"><value>About</value></data>
+  <data name="SettingsWindow_AboutItem.AutomationProperties.Name" xml:space="preserve"><value>About</value></data>
+  <data name="SettingsWindow_CancelOperationButton.Content" xml:space="preserve"><value>Cancel operation</value></data>
+  <data name="SettingsWindow_CancelOperationButton.AutomationProperties.Name" xml:space="preserve"><value>Cancel the current operation</value></data>
+  <data name="SettingsWindow_CancelButton.Content" xml:space="preserve"><value>Cancel</value></data>
+  <data name="SettingsWindow_CancelButton.AutomationProperties.Name" xml:space="preserve"><value>Cancel and close Settings</value></data>
+  <data name="SettingsWindow_SaveButton.Content" xml:space="preserve"><value>Save</value></data>
+  <data name="SettingsWindow_SaveButton.AutomationProperties.Name" xml:space="preserve"><value>Save settings</value></data>
+
+  <data name="Reading_Title.Text" xml:space="preserve"><value>Reading &amp; appearance</value></data>
+  <data name="Reading_ApplicationAppearanceHeading.Text" xml:space="preserve"><value>Application appearance</value></data>
+  <data name="Reading_LanguageSelector.Header" xml:space="preserve"><value>Display language</value></data>
+  <data name="Reading_LanguageSystem.Content" xml:space="preserve"><value>Follow system</value></data>
+  <data name="Reading_LanguageChinese.Content" xml:space="preserve"><value>中文（简体）</value></data>
+  <data name="Reading_LanguageEnglish.Content" xml:space="preserve"><value>English</value></data>
+  <data name="Reading_ThemeSelector.Header" xml:space="preserve"><value>Application theme</value></data>
+  <data name="Reading_ThemeSystem.Content" xml:space="preserve"><value>Follow system</value></data>
+  <data name="Reading_ThemeLight.Content" xml:space="preserve"><value>Light</value></data>
+  <data name="Reading_ThemeDark.Content" xml:space="preserve"><value>Dark</value></data>
+  <data name="Reading_DictionaryContentHeading.Text" xml:space="preserve"><value>Dictionary content</value></data>
+  <data name="Reading_AppFontSize.Header" xml:space="preserve"><value>Base font size</value></data>
+  <data name="Reading_AppLineHeight.Header" xml:space="preserve"><value>Base line height</value></data>
+  <data name="Reading_LatinFont.Header" xml:space="preserve"><value>Latin font</value></data>
+  <data name="Reading_CjkFont.Header" xml:space="preserve"><value>CJK font</value></data>
+  <data name="Reading_Zoom.Header" xml:space="preserve"><value>Default content zoom</value></data>
+  <data name="Reading_ContentWidth.Header" xml:space="preserve"><value>Content width (%)</value></data>
+  <data name="Reading_Brightness.Header" xml:space="preserve"><value>Reduce dictionary brightness in dark mode</value></data>
+  <data name="Reading_Brightness.OnContent" xml:space="preserve"><value>On</value></data>
+  <data name="Reading_Brightness.OffContent" xml:space="preserve"><value>Off</value></data>
+  <data name="Reading_RestoreDefaults.Content" xml:space="preserve"><value>Restore content display defaults</value></data>
+  <data name="LanguageRestart_Title" xml:space="preserve"><value>Restart to change the display language?</value></data>
+  <data name="LanguageRestart_Message" xml:space="preserve"><value>The language setting has been saved. Restart VDict to apply it throughout the application.</value></data>
+  <data name="LanguageRestart_Now" xml:space="preserve"><value>Restart now</value></data>
+  <data name="LanguageRestart_Later" xml:space="preserve"><value>Later</value></data>
+  <data name="LanguageRestart_Failed" xml:space="preserve"><value>VDict could not restart automatically ({0}). Close and reopen it to apply the language.</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Common_Exit" xml:space="preserve"><value>Exit</value></data>
+  <data name="Common_OperationFailed" xml:space="preserve"><value>Operation failed</value></data>
+  <data name="Common_PreparingOperation" xml:space="preserve"><value>Preparing operation</value></data>
+  <data name="FilePicker_SettingsJson" xml:space="preserve"><value>VDict settings (JSON)</value></data>
+  <data name="DebugTimelineWindow.Title" xml:space="preserve"><value>VDict Debug Timeline</value></data>
+  <data name="DebugTimeline_State.Text" xml:space="preserve"><value>Live capture</value></data>
+  <data name="DebugTimeline_StatePaused.Text" xml:space="preserve"><value>Display paused; capture continues</value></data>
+  <data name="DebugTimeline_Limit.Text" xml:space="preserve"><value>Retains up to 500 events</value></data>
+  <data name="DebugTimeline_Pause.Content" xml:space="preserve"><value>Pause display</value></data>
+  <data name="DebugTimeline_Resume.Content" xml:space="preserve"><value>Resume display</value></data>
+  <data name="DebugTimeline_Clear.Content" xml:space="preserve"><value>Clear</value></data>
+  <data name="DebugTimeline_Copy.Content" xml:space="preserve"><value>Copy TSV</value></data>
+  <data name="DebugTimeline_Time.Text" xml:space="preserve"><value>Time</value></data>
+  <data name="DebugTimeline_Elapsed.Text" xml:space="preserve"><value>Elapsed ms</value></data>
+  <data name="DebugTimeline_Interval.Text" xml:space="preserve"><value>Interval ms</value></data>
+  <data name="DebugTimeline_Correlation.Text" xml:space="preserve"><value>Correlation</value></data>
+  <data name="DebugTimeline_Event.Text" xml:space="preserve"><value>Event</value></data>
+  <data name="DebugTimeline_Detail.Text" xml:space="preserve"><value>Details</value></data>
+  <data name="DebugTimeline_Footer.Text" xml:space="preserve"><value>Timestamps are captured at the event source. The window refreshes in 100 ms batches and is intended only for Debug performance diagnostics.</value></data>
+  <data name="Settings_AddDictionary_InvalidMdx" xml:space="preserve"><value>Select an existing MDX file.</value></data>
+  <data name="Settings_AddDictionary_Duplicate" xml:space="preserve"><value>This MDX file is already in the dictionary library.</value></data>
+  <data name="Settings_AddDictionary_Failed" xml:space="preserve"><value>The dictionary could not be added. Check the file and try again.</value></data>
+  <data name="Settings_DictionaryCount" xml:space="preserve"><value>{0} total</value></data>
+  <data name="Settings_Index_Available" xml:space="preserve"><value>Index cache: available</value></data>
+  <data name="Settings_Index_Missing" xml:space="preserve"><value>Index cache: not created yet</value></data>
+  <data name="Settings_Index_Stale" xml:space="preserve"><value>Index cache: rebuild required</value></data>
+  <data name="Settings_Index_Invalid" xml:space="preserve"><value>Index cache: invalid or MDX unavailable</value></data>
+  <data name="Settings_AutoScript_NotFound" xml:space="preserve"><value>No same-name JavaScript file was found for this MDX file.</value></data>
+  <data name="Settings_AutoScript_Found" xml:space="preserve"><value>Discovered automatically: {0}</value></data>
+  <data name="Settings_Drag_AddMdx" xml:space="preserve"><value>Add MDX dictionary</value></data>
+  <data name="Settings_NetworkIsolation_Title" xml:space="preserve"><value>Turn off network isolation?</value></data>
+  <data name="Settings_NetworkIsolation_Message" xml:space="preserve"><value>The dictionary will be able to load remote images and scripts, which can also execute remote code. Turn this off only for dictionaries from sources you trust.</value></data>
+  <data name="Settings_NetworkIsolation_KeepBlocking" xml:space="preserve"><value>Keep blocking</value></data>
+  <data name="Settings_NetworkIsolation_Disable" xml:space="preserve"><value>Turn off</value></data>
+  <data name="Settings_Import_Failed" xml:space="preserve"><value>The settings file could not be imported. Check that it is a valid VDict settings file.</value></data>
+  <data name="Settings_Export_Failed" xml:space="preserve"><value>The settings file could not be exported.</value></data>
+  <data name="Settings_OpenLogs_Title" xml:space="preserve"><value>Open logs folder</value></data>
+  <data name="Settings_OpenLogs_Message" xml:space="preserve"><value>Standard diagnostic logs are redacted. Detailed diagnostic logs can contain lookup terms, resource URIs, and dictionary file information. Review the content before copying or exporting it.</value></data>
+  <data name="Settings_OpenLogs_Open" xml:space="preserve"><value>Open folder</value></data>
+  <data name="Settings_CacheUsage_Base" xml:space="preserve"><value>{0,-22} {1,10}  {2,6} files</value></data>
+  <data name="Settings_CacheUsage_Runtime" xml:space="preserve"><value>  Capacity {0} / Hits {1} / Misses {2} / Evictions {3} / Oversized rejections {4}</value></data>
+  <data name="Settings_CacheUsage_Error" xml:space="preserve"><value>  Error: unavailable</value></data>
+  <data name="Settings_CacheInspect_Canceled" xml:space="preserve"><value>Inspection canceled</value></data>
+  <data name="Settings_CacheClear_Canceled" xml:space="preserve"><value>Cache cleanup was canceled.</value></data>
+  <data name="Settings_BrowserCacheClear_Failed" xml:space="preserve"><value>The browser cache could not be cleared. Existing data was left unchanged.</value></data>
+  <data name="Settings_RebuildIndexes_Title" xml:space="preserve"><value>Rebuild all indexes</value></data>
+  <data name="Settings_RebuildIndexes_Message" xml:space="preserve"><value>Existing lookups will pause during the rebuild. Dictionaries will reload automatically when it is complete.</value></data>
+  <data name="Settings_RebuildIndexes_Confirm" xml:space="preserve"><value>Rebuild</value></data>
+  <data name="Settings_RebuildIndexes_Canceled" xml:space="preserve"><value>The index rebuild was canceled. The current runtime snapshot remains safe.</value></data>
+  <data name="Settings_OpenFolder_Failed" xml:space="preserve"><value>The folder could not be opened.</value></data>
+  <data name="Settings_Save_Failed" xml:space="preserve"><value>Settings could not be saved.</value></data>
+  <data name="Settings_Save_Canceled" xml:space="preserve"><value>Saving was canceled. Your edits are still available.</value></data>
+  <data name="Settings_Save_TooltipDirty" xml:space="preserve"><value>Save and apply changes</value></data>
+  <data name="Settings_Save_TooltipClean" xml:space="preserve"><value>There are no unsaved changes</value></data>
+  <data name="Settings_Save_AlreadySaving" xml:space="preserve"><value>Settings are already being saved.</value></data>
+  <data name="Settings_Save_WindowUnavailable" xml:space="preserve"><value>This window cannot save settings right now.</value></data>
+  <data name="Settings_Save_Conflict" xml:space="preserve"><value>Settings changed in another operation. Conflicting fields: {0}</value></data>
+  <data name="Settings_Save_CanceledDraftKept" xml:space="preserve"><value>Saving was canceled. Your draft was not discarded.</value></data>
+  <data name="Settings_Discard_Title" xml:space="preserve"><value>Discard unsaved changes?</value></data>
+  <data name="Settings_Discard_Message" xml:space="preserve"><value>Your settings draft has not been saved. Closing this window will discard these changes.</value></data>
+  <data name="Settings_Discard_Confirm" xml:space="preserve"><value>Discard changes</value></data>
+  <data name="Settings_Discard_Continue" xml:space="preserve"><value>Continue editing</value></data>
+  <data name="Settings_Load_RecoveredBackup" xml:space="preserve"><value>The main settings file could not be read. Settings were restored from the most recent backup.</value></data>
+  <data name="Settings_Load_DefaultsAfterFailure" xml:space="preserve"><value>The settings file and backup could not be restored. Default settings are in use, and the original file was preserved.</value></data>
+  <data name="Settings_Save_DiskChanged" xml:space="preserve"><value>The settings file was changed by another process.</value></data>
+  <data name="Settings_Import_Invalid" xml:space="preserve"><value>The imported settings file is invalid.</value></data>
+  <data name="Settings_Progress_Validating" xml:space="preserve"><value>Normalizing and validating settings…</value></data>
+  <data name="Settings_Progress_CheckingIndex" xml:space="preserve"><value>Checking the index for “{0}”…</value></data>
+  <data name="Settings_Progress_CheckingDictionary" xml:space="preserve"><value>Validating “{0}”…</value></data>
+  <data name="Settings_Progress_ReadyToCommit" xml:space="preserve"><value>Settings are ready for an atomic commit…</value></data>
+  <data name="Settings_Progress_CheckingFiles" xml:space="preserve"><value>Validating files and duplicates for “{0}”…</value></data>
+  <data name="Settings_Progress_FilesValidated" xml:space="preserve"><value>File and duplicate validation is complete.</value></data>
+  <data name="Settings_Progress_Committing" xml:space="preserve"><value>Saving settings atomically and switching the dictionary snapshot…</value></data>
+  <data name="Settings_Progress_Complete" xml:space="preserve"><value>Settings were saved and applied.</value></data>
+  <data name="Settings_Field_Zoom" xml:space="preserve"><value>zoom</value></data>
+  <data name="Settings_Field_CandidatePaneWidth" xml:space="preserve"><value>candidate pane width</value></data>
+  <data name="Settings_FieldPatch_Conflict" xml:space="preserve"><value>The {0} update conflicts with settings from another process.</value></data>
+  <data name="Settings_FieldPatch_RuntimeChanged" xml:space="preserve"><value>Runtime settings changed. Try saving {0} again.</value></data>
+  <data name="Settings_Commit_InvalidPlan" xml:space="preserve"><value>The settings commit plan is no longer valid.</value></data>
+  <data name="Settings_Commit_RuntimeChanged" xml:space="preserve"><value>Runtime settings changed. Prepare the update again.</value></data>
+
+  <data name="Validation_AppFontSize" xml:space="preserve"><value>Font size must be between 10 and 48.</value></data>
+  <data name="Validation_AppLineHeight" xml:space="preserve"><value>Line height must be between 1.0 and 3.0.</value></data>
+  <data name="Validation_ContentZoom" xml:space="preserve"><value>Content zoom must be between 0.5 and 2.5.</value></data>
+  <data name="Validation_ContentWidth" xml:space="preserve"><value>Content width must be between 30% and 100%.</value></data>
+  <data name="Validation_CandidatePaneWidth" xml:space="preserve"><value>Candidate pane width must be between 180 and 380.</value></data>
+  <data name="Validation_DictionaryId" xml:space="preserve"><value>The dictionary ID is invalid or duplicated.</value></data>
+  <data name="Validation_MdxRequired" xml:space="preserve"><value>An MDX file is required.</value></data>
+  <data name="Validation_DictionaryFontSize" xml:space="preserve"><value>Dictionary font size must be between 10 and 48.</value></data>
+  <data name="Validation_DictionaryLineHeight" xml:space="preserve"><value>Dictionary line height must be between 1.0 and 3.0.</value></data>
+  <data name="Validation_PathSyntax" xml:space="preserve"><value>The file path is invalid: {0}</value></data>
+  <data name="Validation_JavaScriptFile" xml:space="preserve"><value>The JavaScript file does not exist or has an invalid extension: {0}</value></data>
+  <data name="Validation_MdxFile" xml:space="preserve"><value>The MDX file does not exist or has an invalid extension.</value></data>
+  <data name="Validation_MdxPathDuplicate" xml:space="preserve"><value>The MDX path duplicates “{0}”.</value></data>
+  <data name="Validation_MddFile" xml:space="preserve"><value>The MDD file does not exist or has an invalid extension: {0}</value></data>
+  <data name="Validation_CssFile" xml:space="preserve"><value>The CSS file does not exist or has an invalid extension: {0}</value></data>
+  <data name="Validation_MdxChangedDuringHash" xml:space="preserve"><value>The MDX file changed while its hash was being calculated. Try again.</value></data>
+  <data name="Validation_MdxContentDuplicate" xml:space="preserve"><value>The MDX content duplicates “{0}”.</value></data>
+
+  <data name="Catalog_ContentUnavailable" xml:space="preserve"><value>{0}: the candidate index is available, but dictionary content cannot currently be read.</value></data>
+  <data name="Catalog_DictionaryNotLoaded" xml:space="preserve"><value>The dictionary is not loaded.</value></data>
+  <data name="Catalog_IndexNotFound" xml:space="preserve"><value>The candidate index for “{0}” could not be found.</value></data>
+  <data name="Index_MdxNotFound" xml:space="preserve"><value>The MDX file could not be found.</value></data>
+  <data name="Index_DestinationFailed" xml:space="preserve"><value>The dictionary index destination could not be determined.</value></data>
+  <data name="Index_Progress_Indexing" xml:space="preserve"><value>Indexing entries</value></data>
+  <data name="Index_NoEntries" xml:space="preserve"><value>The MDX file has no entries that can be indexed.</value></data>
+  <data name="Index_CountValidationFailed" xml:space="preserve"><value>Index entry count validation failed.</value></data>
+  <data name="Index_Progress_Complete" xml:space="preserve"><value>Index preparation is complete</value></data>
+  <data name="Maintenance_WebViewProfileRequired" xml:space="preserve"><value>WebView2 browsing data must be cleared through the active Profile API. The user data folder was not deleted directly.</value></data>
+  <data name="Maintenance_Progress_ReleasingIndexes" xml:space="preserve"><value>Pausing lookups and releasing index handles…</value></data>
+  <data name="Maintenance_RebuildFailed" xml:space="preserve"><value>The index rebuild failed.</value></data>
+  <data name="Maintenance_UnapprovedDirectory" xml:space="preserve"><value>Cleanup was refused for an unapproved directory: {0}</value></data>
+  <data name="Maintenance_ReparsePoint" xml:space="preserve"><value>Cleanup was refused for a reparse point: {0}</value></data>
+  <data name="Maintenance_RestoreDictionaryStateFailed" xml:space="preserve"><value>The dictionary state from before maintenance could not be restored.</value></data>
+  <data name="Settings_CacheClear_Failed" xml:space="preserve"><value>Some cache data could not be cleared.</value></data>
+  <data name="Settings_RebuildIndexes_Failed" xml:space="preserve"><value>Some dictionary indexes could not be rebuilt.</value></data>
+  <data name="MainWindow_StartupFailed_Title" xml:space="preserve"><value>VDict could not start</value></data>
+  <data name="MainWindow_CurrentPath" xml:space="preserve"><value>Current path</value></data>
+  <data name="MainWindow_CandidatePaneSaveFailed" xml:space="preserve"><value>The candidate pane width could not be saved.</value></data>
+  <data name="Settings_OpenWindow_Failed" xml:space="preserve"><value>Settings could not be opened.</value></data>
+  <data name="App_PortableDataDirectoryNotWritable" xml:space="preserve"><value>The portable data folder is not writable. Move VDict to a folder where you have write permission.</value></data>
+  <data name="App_StartupInitializationFailed" xml:space="preserve"><value>VDict could not finish starting. Check the logs for details.</value></data>
+
+  <data name="Dictionaries_Title.Text" xml:space="preserve"><value>Dictionaries</value></data>
+  <data name="Dictionaries_Description.Text" xml:space="preserve"><value>Manage the dictionaries used for lookup, their order, and compatibility options for each dictionary.</value></data>
+  <data name="Dictionaries_AddButton.AutomationProperties.Name" xml:space="preserve"><value>Add MDX dictionary</value></data>
+  <data name="Dictionaries_AddButtonText.Text" xml:space="preserve"><value>Add MDX</value></data>
+  <data name="Dictionaries_MoveUpButton.Label" xml:space="preserve"><value>Move up</value></data>
+  <data name="Dictionaries_MoveDownButton.Label" xml:space="preserve"><value>Move down</value></data>
+  <data name="Dictionaries_RemoveButton.Label" xml:space="preserve"><value>Remove selected dictionary</value></data>
+  <data name="Dictionaries_LibraryPanel.AutomationProperties.Name" xml:space="preserve"><value>Dictionary library panel</value></data>
+  <data name="Dictionaries_LibraryHeading.Text" xml:space="preserve"><value>Dictionary library</value></data>
+  <data name="Dictionaries_List.AutomationProperties.Name" xml:space="preserve"><value>Dictionary list</value></data>
+  <data name="Dictionaries_EmptyState.Text" xml:space="preserve"><value>No dictionaries have been added. Add an MDX file from the command bar above.</value></data>
+  <data name="Dictionaries_EditorPanel.AutomationProperties.Name" xml:space="preserve"><value>Selected dictionary details panel</value></data>
+  <data name="Dictionaries_EditorEmptyState.Text" xml:space="preserve"><value>Select a dictionary to view and edit its details.</value></data>
+  <data name="Dictionaries_SelectedHeading.Text" xml:space="preserve"><value>Selected dictionary</value></data>
+  <data name="Dictionaries_BasicHeading.Text" xml:space="preserve"><value>Basic information</value></data>
+  <data name="Dictionaries_AccessHeading.Text" xml:space="preserve"><value>Availability &amp; security</value></data>
+  <data name="Dictionaries_EnabledToggle.Header" xml:space="preserve"><value>Enabled</value></data>
+  <data name="Dictionaries_EnabledToggle.OnContent" xml:space="preserve"><value>On</value></data>
+  <data name="Dictionaries_EnabledToggle.OffContent" xml:space="preserve"><value>Off</value></data>
+  <data name="Dictionaries_BlockNetworkToggle.Header" xml:space="preserve"><value>Block network access (recommended)</value></data>
+  <data name="Dictionaries_BlockNetworkToggle.OnContent" xml:space="preserve"><value>The dictionary cannot load remote resources</value></data>
+  <data name="Dictionaries_BlockNetworkToggle.OffContent" xml:space="preserve"><value>The dictionary can load remote images and scripts</value></data>
+  <data name="Dictionaries_DisplayName.Header" xml:space="preserve"><value>Display name (leave blank to use the dictionary name)</value></data>
+  <data name="Dictionaries_MdxPath.Header" xml:space="preserve"><value>MDX file</value></data>
+  <data name="Dictionaries_AdvancedOptions.Header" xml:space="preserve"><value>Advanced options</value></data>
+  <data name="Dictionaries_AdvancedOptions.AutomationProperties.Name" xml:space="preserve"><value>Advanced dictionary options</value></data>
+  <data name="Dictionaries_ResourcesHeading.Text" xml:space="preserve"><value>Resource files</value></data>
+  <data name="Dictionaries_MddPaths.Header" xml:space="preserve"><value>MDD files (one per line)</value></data>
+  <data name="Dictionaries_CssPaths.Header" xml:space="preserve"><value>CSS files (one per line)</value></data>
+  <data name="Dictionaries_ScriptPaths.Header" xml:space="preserve"><value>JavaScript files (one per line)</value></data>
+  <data name="Dictionaries_OverrideFont.Header" xml:space="preserve"><value>Override this dictionary's content fonts</value></data>
+  <data name="Dictionaries_OverrideFont.OnContent" xml:space="preserve"><value>On</value></data>
+  <data name="Dictionaries_OverrideFont.OffContent" xml:space="preserve"><value>Off</value></data>
+  <data name="Dictionaries_OverrideTypography.Header" xml:space="preserve"><value>Override this dictionary's font size and line height</value></data>
+  <data name="Dictionaries_OverrideTypography.OnContent" xml:space="preserve"><value>On</value></data>
+  <data name="Dictionaries_OverrideTypography.OffContent" xml:space="preserve"><value>Off</value></data>
+  <data name="Dictionaries_FontSize.Header" xml:space="preserve"><value>Font size</value></data>
+  <data name="Dictionaries_LineHeight.Header" xml:space="preserve"><value>Line height</value></data>
+  <data name="Dictionaries_LatinFont.Header" xml:space="preserve"><value>Latin font</value></data>
+  <data name="Dictionaries_CjkFont.Header" xml:space="preserve"><value>CJK font</value></data>
+  <data name="Dictionaries_AppearanceHeading.Text" xml:space="preserve"><value>Content appearance</value></data>
+  <data name="Dictionaries_DarkModeSelector.Header" xml:space="preserve"><value>Dark mode display strategy</value></data>
+  <data name="Dictionaries_DarkModeGlobal.Content" xml:space="preserve"><value>Follow application theme</value></data>
+  <data name="Dictionaries_DarkModeOriginal.Content" xml:space="preserve"><value>Keep the dictionary's original colors</value></data>
+  <data name="Dictionaries_DarkModeDark.Content" xml:space="preserve"><value>Optimize for dark mode</value></data>
+  <data name="Dictionaries_RestoreAppearance.Content" xml:space="preserve"><value>Restore selected dictionary appearance</value></data>
+  <data name="Dictionaries_DropHint.Text" xml:space="preserve"><value>You can also drag one or more MDX files to the dictionary list. MDD files with the same prefix, CSS files in the same folder, and same-name JavaScript files are discovered automatically.</value></data>
+
+  <data name="Security_Title.Text" xml:space="preserve"><value>Security &amp; compatibility</value></data>
+  <data name="Security_Description.Text" xml:space="preserve"><value>HTTP/HTTPS, file, ftp, ws, and wss requests from dictionary content are always blocked. Local script compatibility modes do not grant network access.</value></data>
+  <data name="Security_ExternalLinks.Header" xml:space="preserve"><value>External links</value></data>
+  <data name="Security_ExternalLinksBlock.Content" xml:space="preserve"><value>Block</value></data>
+  <data name="Security_ExternalLinksSystemBrowser.Content" xml:space="preserve"><value>Open in the system browser</value></data>
+
+  <data name="Data_Title.Text" xml:space="preserve"><value>Data &amp; maintenance</value></data>
+  <data name="Data_SettingsHeading.Text" xml:space="preserve"><value>Settings data</value></data>
+  <data name="Data_ImportSettings.Content" xml:space="preserve"><value>Import settings</value></data>
+  <data name="Data_ExportSettings.Content" xml:space="preserve"><value>Export settings</value></data>
+  <data name="Data_OpenDataFolder.Content" xml:space="preserve"><value>Open data folder</value></data>
+  <data name="Data_OpenLogsFolder.Content" xml:space="preserve"><value>Open logs folder</value></data>
+  <data name="Data_CacheHeading.Text" xml:space="preserve"><value>Cache status</value></data>
+  <data name="Data_InspectCache.Content" xml:space="preserve"><value>Inspect caches</value></data>
+  <data name="Data_CacheNotInspected.Text" xml:space="preserve"><value>Not inspected yet.</value></data>
+  <data name="Data_DangerousOperations.Header" xml:space="preserve"><value>Maintenance and potentially destructive operations</value></data>
+  <data name="Data_DangerousOperations.AutomationProperties.Name" xml:space="preserve"><value>Maintenance and potentially destructive operations</value></data>
+  <data name="Data_DangerousOperationsWarning.Text" xml:space="preserve"><value>The following operations can pause lookup, remove rebuildable data, or reset settings. Make sure your current work is saved before continuing.</value></data>
+  <data name="Data_ClearTemporaryCache.Content" xml:space="preserve"><value>Clear resource and temporary caches</value></data>
+  <data name="Data_ClearBrowserCache.Content" xml:space="preserve"><value>Clear browser cache</value></data>
+  <data name="Data_RebuildIndexes.Content" xml:space="preserve"><value>Rebuild all dictionary indexes</value></data>
+  <data name="Data_RestoreDefaults.Content" xml:space="preserve"><value>Restore all settings</value></data>
+
+  <data name="About_Title.Text" xml:space="preserve"><value>About</value></data>
+  <data name="About_Technologies.Text" xml:space="preserve"><value>Built with .NET 10, WinUI 3, Windows App SDK 2.2, and WebView2.</value></data>
+</root>

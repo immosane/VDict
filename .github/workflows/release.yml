@@ -1,0 +1,158 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+      DOTNET_NOLOGO: "1"
+
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Validate release tag and version
+        shell: pwsh
+        run: |
+          $tag = '${{ github.ref_name }}'
+          if ($tag -notmatch '^v(?<version>\d+\.\d+\.\d+)$') {
+              throw "Release tag must use vMAJOR.MINOR.PATCH format: $tag"
+          }
+
+          $version = $Matches.version
+          "RELEASE_VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+
+          git fetch origin `
+              '+refs/heads/main:refs/remotes/origin/main' `
+              --no-tags
+          if ($LASTEXITCODE -ne 0) {
+              throw 'Unable to fetch origin/main.'
+          }
+
+          git merge-base --is-ancestor $env:GITHUB_SHA origin/main
+          if ($LASTEXITCODE -ne 0) {
+              throw "Release tag $tag does not point to a commit on main."
+          }
+
+          [xml] $props = Get-Content -LiteralPath Directory.Build.props -Raw
+          $projectVersion = @(
+              $props.Project.PropertyGroup.VersionPrefix |
+                  Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+          )[0]
+          if ($projectVersion -ne $version) {
+              throw "Tag version $version does not match VersionPrefix $projectVersion."
+          }
+
+          $changelog = Get-Content -LiteralPath CHANGELOG.md -Raw -Encoding utf8
+          $escapedVersion = [regex]::Escape($version)
+          if ($changelog -notmatch "(?m)^##\s+$escapedVersion(?:\s|$)") {
+              throw "CHANGELOG.md does not contain a section for $version."
+          }
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore and audit dependencies
+        shell: pwsh
+        run: dotnet restore VDict.sln -p:NuGetAudit=true -p:NuGetAuditMode=all
+
+      - name: Build
+        shell: pwsh
+        run: dotnet build VDict.sln --configuration Release --no-restore
+
+      - name: Test
+        shell: pwsh
+        run: dotnet test VDict.sln --configuration Release --no-build
+
+      - name: Validate localization resources
+        shell: pwsh
+        run: ./build/Test-LocalizationResources.ps1
+
+      - name: Validate deterministic dictionary fixtures
+        shell: pwsh
+        run: ./build/Run-RemediationPhase0A.ps1
+
+      - name: Build portable release
+        shell: pwsh
+        run: ./build/Publish.ps1 -Version $env:RELEASE_VERSION
+
+      - name: Verify release contents
+        shell: pwsh
+        run: |
+          $zipName = "VDict-$env:RELEASE_VERSION-win-x64-portable.zip"
+          $zipPath = Join-Path artifacts $zipName
+          $checksumPath = Join-Path artifacts 'SHA256SUMS.txt'
+
+          if (-not (Test-Path -LiteralPath $zipPath -PathType Leaf)) {
+              throw "Release archive was not created: $zipPath"
+          }
+          if (-not (Test-Path -LiteralPath $checksumPath -PathType Leaf)) {
+              throw "Checksum file was not created: $checksumPath"
+          }
+
+          Add-Type -AssemblyName System.IO.Compression.FileSystem
+          $archive = [System.IO.Compression.ZipFile]::OpenRead(
+              (Resolve-Path -LiteralPath $zipPath).Path)
+          try {
+              $privateEntryPattern =
+                  '(^|/)(Data|UserData|TestResults|\.ai-work|\.ai-notes|\.codex|\.agents)(/|$)' +
+                  '|(^|/)(settings\.json|AGENTS\.md)$' +
+                  '|\.(mdx|mdd|trx|pdb|log|dmp|etl)$'
+              $blockedEntries = @(
+                  $archive.Entries |
+                      Where-Object {
+                          $_.FullName.Replace('\', '/') -match $privateEntryPattern
+                      } |
+                      Select-Object -ExpandProperty FullName
+              )
+              if ($blockedEntries.Count -gt 0) {
+                  throw "Release archive contains blocked entries: $($blockedEntries -join ', ')"
+              }
+          }
+          finally {
+              $archive.Dispose()
+          }
+
+          $checksumLine = (Get-Content -LiteralPath $checksumPath -Raw).Trim()
+          $expectedHash, $expectedName = $checksumLine -split '\s+', 2
+          if ($expectedName -ne $zipName) {
+              throw "Checksum file names $expectedName instead of $zipName."
+          }
+
+          $actualHash =
+              (Get-FileHash -LiteralPath $zipPath -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($actualHash -ne $expectedHash.ToLowerInvariant()) {
+              throw 'Release archive SHA-256 does not match SHA256SUMS.txt.'
+          }
+
+      - name: Publish GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $zipPath = "artifacts/VDict-$env:RELEASE_VERSION-win-x64-portable.zip"
+          gh release create '${{ github.ref_name }}' `
+              $zipPath `
+              'artifacts/SHA256SUMS.txt' `
+              --verify-tag `
+              --title "VDict $env:RELEASE_VERSION" `
+              --generate-notes `
+              --latest

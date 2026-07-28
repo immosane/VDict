@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Platform-independent domain models, policies, and contracts for VDict.</Description>
+  </PropertyGroup>
+</Project>

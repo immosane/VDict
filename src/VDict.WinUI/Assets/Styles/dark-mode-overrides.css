@@ -1,0 +1,59 @@
+html[data-vdict-dark-engine="darkreader"] {
+    color-scheme: dark;
+    background-color: #111418;
+}
+
+html.vdict-await-dark body {
+    visibility: hidden;
+}
+
+html[data-vdict-dark-engine="darkreader"] :focus-visible {
+    outline-color: #638fc4;
+}
+
+html[data-vdict-dark-engine="darkreader"] a:link {
+    color: #7db8f2;
+}
+
+html[data-vdict-dark-engine="darkreader"] a:visited {
+    color: #c6a0f6;
+}
+
+html[data-vdict-dark-engine="darkreader"] :is(
+    blockquote,
+    pre,
+    code,
+    kbd,
+    samp,
+    .example,
+    .examples,
+    .etymology,
+    .note,
+    .tip) {
+    border-color: #4a5360;
+}
+
+html[data-vdict-dark-engine="darkreader"] :is(
+    img,
+    picture,
+    video,
+    canvas,
+    svg,
+    .icon,
+    .symbol,
+    .audio,
+    .sound,
+    .audio_play_button,
+    [class*="icon" i],
+    [class*="audio" i],
+    [class*="sound" i]) {
+    filter: none !important;
+}
+
+html[data-vdict-dark-engine="darkreader"] :is(
+    button,
+    [role="button"],
+    summary,
+    a):is(:hover, :active) {
+    outline-color: #7db8f2;
+}

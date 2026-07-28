@@ -1,0 +1,64 @@
+<UserControl
+    x:Class="VDict.WinUI.Views.SettingsSections.ReadingAppearanceSettingsSection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <StackPanel Spacing="16">
+    <TextBlock x:Uid="Reading_Title" Style="{ThemeResource TitleTextBlockStyle}" />
+    <TextBlock x:Uid="Reading_ApplicationAppearanceHeading" FontSize="18" FontWeight="SemiBold" />
+    <ComboBox
+        x:Name="LanguageSelectorControl"
+        x:Uid="Reading_LanguageSelector"
+        Style="{StaticResource VDictSettingsComboBoxStyle}">
+      <ComboBoxItem x:Uid="Reading_LanguageSystem" Tag="system" />
+      <ComboBoxItem x:Uid="Reading_LanguageChinese" Tag="zh-CN" />
+      <ComboBoxItem x:Uid="Reading_LanguageEnglish" Tag="en-US" />
+    </ComboBox>
+    <ComboBox
+        x:Name="ThemeSelectorControl"
+        x:Uid="Reading_ThemeSelector"
+        Style="{StaticResource VDictSettingsComboBoxStyle}">
+      <ComboBoxItem x:Uid="Reading_ThemeSystem" Tag="system" />
+      <ComboBoxItem x:Uid="Reading_ThemeLight" Tag="light" />
+      <ComboBoxItem x:Uid="Reading_ThemeDark" Tag="dark" />
+    </ComboBox>
+
+    <TextBlock
+        x:Uid="Reading_DictionaryContentHeading"
+        Margin="0,8,0,0"
+        FontSize="18"
+        FontWeight="SemiBold" />
+    <NumberBox
+        x:Name="AppFontSizeBoxControl"
+        x:Uid="Reading_AppFontSize"
+        Minimum="10"
+        Maximum="48" />
+    <NumberBox
+        x:Name="AppLineHeightBoxControl"
+        x:Uid="Reading_AppLineHeight"
+        Minimum="1"
+        Maximum="3"
+        SmallChange="0.05" />
+    <AutoSuggestBox x:Name="LatinFontBoxControl" x:Uid="Reading_LatinFont" />
+    <AutoSuggestBox x:Name="CjkFontBoxControl" x:Uid="Reading_CjkFont" />
+    <NumberBox
+        x:Name="ZoomBoxControl"
+        x:Uid="Reading_Zoom"
+        Minimum="0.5"
+        Maximum="2.5"
+        SmallChange="0.1" />
+    <NumberBox
+        x:Name="ContentWidthBoxControl"
+        x:Uid="Reading_ContentWidth"
+        Minimum="30"
+        Maximum="100"
+        SmallChange="5"
+        SpinButtonPlacementMode="Inline" />
+    <ToggleSwitch
+        x:Name="BrightnessToggleControl"
+        x:Uid="Reading_Brightness" />
+    <Button
+        x:Name="RestoreReaderDefaultsButton"
+        x:Uid="Reading_RestoreDefaults"
+        HorizontalAlignment="Left" />
+  </StackPanel>
+</UserControl>

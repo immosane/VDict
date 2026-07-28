@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <data name="AppDescription" xml:space="preserve"><value>现代 MDX/MDD 词典阅读器</value></data>
+
+  <data name="MainWindow_AppTitleBar.AutomationProperties.Name" xml:space="preserve"><value>标题栏</value></data>
+  <data name="MainWindow_SearchToolbar.AutomationProperties.Name" xml:space="preserve"><value>搜索栏</value></data>
+  <data name="MainWindow_BackButton.AutomationProperties.Name" xml:space="preserve"><value>后退</value></data>
+  <data name="MainWindow_BackButton.ToolTipService.ToolTip" xml:space="preserve"><value>后退</value></data>
+  <data name="MainWindow_ForwardButton.AutomationProperties.Name" xml:space="preserve"><value>前进</value></data>
+  <data name="MainWindow_ForwardButton.ToolTipService.ToolTip" xml:space="preserve"><value>前进</value></data>
+  <data name="MainWindow_SearchBox.AutomationProperties.Name" xml:space="preserve"><value>查询词</value></data>
+  <data name="MainWindow_SearchBox.PlaceholderText" xml:space="preserve"><value>输入要查询的词语</value></data>
+  <data name="MainWindow_SearchButton.AutomationProperties.Name" xml:space="preserve"><value>查询</value></data>
+  <data name="MainWindow_SearchButton.ToolTipService.ToolTip" xml:space="preserve"><value>查询</value></data>
+  <data name="MainWindow_SettingsButton.AutomationProperties.Name" xml:space="preserve"><value>设置</value></data>
+  <data name="MainWindow_SettingsButton.Content" xml:space="preserve"><value>设置</value></data>
+  <data name="MainWindow_CandidatePane.AutomationProperties.Name" xml:space="preserve"><value>候选栏</value></data>
+  <data name="MainWindow_DictionariesHeading.Text" xml:space="preserve"><value>词库</value></data>
+  <data name="MainWindow_DictionarySelector.AutomationProperties.Name" xml:space="preserve"><value>词库</value></data>
+  <data name="MainWindow_CandidatesHeading.Text" xml:space="preserve"><value>候选词</value></data>
+  <data name="MainWindow_CandidateList.AutomationProperties.Name" xml:space="preserve"><value>候选词</value></data>
+  <data name="MainWindow_CandidateDivider.AutomationProperties.Name" xml:space="preserve"><value>候选栏分隔条</value></data>
+  <data name="MainWindow_CandidateDivider.AutomationProperties.HelpText" xml:space="preserve"><value>使用左右方向键或拖动来调整候选栏宽度</value></data>
+  <data name="MainWindow_CandidateDivider.ToolTipService.ToolTip" xml:space="preserve"><value>拖动或使用左右方向键调整左栏宽度</value></data>
+  <data name="MainWindow_ReaderCard.AutomationProperties.Name" xml:space="preserve"><value>正文卡片</value></data>
+  <data name="MainWindow_StatusBar.AutomationProperties.Name" xml:space="preserve"><value>状态栏</value></data>
+  <data name="MainWindow_ZoomOutButton.AutomationProperties.Name" xml:space="preserve"><value>缩小词典正文</value></data>
+  <data name="MainWindow_ZoomOutButton.ToolTipService.ToolTip" xml:space="preserve"><value>缩小正文 (Ctrl+-)</value></data>
+  <data name="MainWindow_ZoomInButton.AutomationProperties.Name" xml:space="preserve"><value>放大词典正文</value></data>
+  <data name="MainWindow_ZoomInButton.ToolTipService.ToolTip" xml:space="preserve"><value>放大正文 (Ctrl++)</value></data>
+  <data name="MainWindow_ZoomResetButton.AutomationProperties.Name" xml:space="preserve"><value>重置词典正文缩放</value></data>
+  <data name="MainWindow_ZoomResetButton.ToolTipService.ToolTip" xml:space="preserve"><value>重置正文为 100% (Ctrl+0)</value></data>
+
+  <data name="ReaderHost_ReaderSurface.AutomationProperties.Name" xml:space="preserve"><value>词典正文</value></data>
+  <data name="ReaderHost_RuntimeErrorTitle.Text" xml:space="preserve"><value>正文暂时无法显示</value></data>
+  <data name="ReaderHost_RuntimeErrorText.Text" xml:space="preserve"><value>VDict 使用 Microsoft Edge WebView2 显示词典正文。请重试；如果运行时缺失，将显示安装说明。</value></data>
+  <data name="ReaderHost_InstallRuntimeButton.Content" xml:space="preserve"><value>WebView2 安装说明</value></data>
+  <data name="ReaderHost_RetryButton.Content" xml:space="preserve"><value>重试</value></data>
+  <data name="ReaderHost_ContextMenu_LookupSelection" xml:space="preserve"><value>查询选中文字</value></data>
+  <data name="ReaderHost_Status_NavigationBlocked" xml:space="preserve"><value>已阻止词典正文导航。</value></data>
+  <data name="ReaderHost_Status_NewWindowBlocked" xml:space="preserve"><value>已阻止词典创建新窗口。</value></data>
+  <data name="ReaderHost_Status_FrameNavigationBlocked" xml:space="preserve"><value>已阻止词典正文框架导航。</value></data>
+  <data name="ReaderHost_Status_ResourceFailed" xml:space="preserve"><value>词典资源加载失败。</value></data>
+  <data name="ReaderHost_Status_DownloadSessionInvalid" xml:space="preserve"><value>下载已阻止：正文会话已失效。</value></data>
+  <data name="ReaderHost_Status_DownloadNetworkBlocked" xml:space="preserve"><value>下载已阻止：当前词典不允许远程网络访问。</value></data>
+  <data name="ReaderHost_Status_DownloadPendingAction" xml:space="preserve"><value>下载已阻止：已有待确认的正文操作。</value></data>
+  <data name="ReaderHost_Download_Title" xml:space="preserve"><value>允许词典下载文件？</value></data>
+  <data name="ReaderHost_Download_Message" xml:space="preserve"><value>来源：{0}&#x0A;文件：{1}</value></data>
+  <data name="ReaderHost_Download_ChooseLocation" xml:space="preserve"><value>选择保存位置</value></data>
+  <data name="ReaderHost_Download_FileType" xml:space="preserve"><value>下载文件</value></data>
+  <data name="ReaderHost_Status_DownloadCanceled" xml:space="preserve"><value>下载已取消。</value></data>
+  <data name="ReaderHost_Status_DownloadSessionChanged" xml:space="preserve"><value>下载已阻止：正文会话已变化。</value></data>
+  <data name="ReaderHost_Status_DownloadingTo" xml:space="preserve"><value>正在下载到 {0}</value></data>
+  <data name="ReaderHost_Status_DownloadFailed" xml:space="preserve"><value>下载未能开始。</value></data>
+  <data name="ReaderHost_Status_MessageFailed" xml:space="preserve"><value>词典正文操作失败。</value></data>
+  <data name="ReaderHost_Status_GpuRecovered" xml:space="preserve"><value>WebView2 GPU 进程已重启，正文继续使用系统回退。</value></data>
+  <data name="ReaderHost_Status_ProcessRecovering" xml:space="preserve"><value>WebView2 进程异常，正在恢复正文。</value></data>
+  <data name="ReaderHost_Status_LinkUntrusted" xml:space="preserve"><value>外链已阻止：缺少可信用户发起信号。</value></data>
+  <data name="ReaderHost_Status_LinkPendingAction" xml:space="preserve"><value>外链已阻止：已有待确认的正文操作。</value></data>
+  <data name="ReaderHost_Status_LinkActivationInvalid" xml:space="preserve"><value>外链已阻止：用户激活票据无效。</value></data>
+  <data name="ReaderHost_Link_Title" xml:space="preserve"><value>在系统浏览器中打开外部链接？</value></data>
+  <data name="ReaderHost_Link_Message" xml:space="preserve"><value>目标站点：{0}</value></data>
+  <data name="ReaderHost_Link_Open" xml:space="preserve"><value>打开</value></data>
+  <data name="ReaderHost_Status_LinkCanceled" xml:space="preserve"><value>外链已取消。</value></data>
+  <data name="ReaderHost_Status_LinkFailed" xml:space="preserve"><value>外链打开失败。</value></data>
+  <data name="ReaderHost_RuntimeMissing" xml:space="preserve"><value>VDict 使用 Microsoft Edge WebView2 显示词典正文。请安装 Evergreen WebView2 Runtime 后重试。</value></data>
+  <data name="ReaderHost_ContentUnavailable" xml:space="preserve"><value>词典正文暂时无法显示。你可以立即重试；查询和候选词仍可继续使用。</value></data>
+  <data name="Reader_Candidates_EnterWord" xml:space="preserve"><value>输入单词以查看候选词。</value></data>
+  <data name="Reader_Candidates_Searching" xml:space="preserve"><value>正在查找候选词…</value></data>
+  <data name="Reader_Candidates_NoMatch" xml:space="preserve"><value>没有匹配的候选词。</value></data>
+  <data name="Reader_Candidates_FailedHint" xml:space="preserve"><value>候选词加载失败，请继续输入或重试。</value></data>
+  <data name="Reader_Candidates_Failed" xml:space="preserve"><value>候选词加载失败。</value></data>
+  <data name="Reader_Lookup_Searching" xml:space="preserve"><value>正在查询…</value></data>
+  <data name="Reader_Lookup_Failed" xml:space="preserve"><value>查询失败，请重试。</value></data>
+  <data name="Reader_Lookup_NotFound" xml:space="preserve"><value>未找到“{0}”。</value></data>
+  <data name="Reader_Lookup_FoundOne" xml:space="preserve"><value>已在 1 部词典中找到结果。</value></data>
+  <data name="Reader_Lookup_FoundMany" xml:space="preserve"><value>已在 {0} 部词典中找到结果。</value></data>
+  <data name="Reader_NotFound_Title" xml:space="preserve"><value>未找到词条</value></data>
+  <data name="Reader_NotFound_Prefix" xml:space="preserve"><value>没有词典收录 </value></data>
+  <data name="Reader_NotFound_Suffix" xml:space="preserve"><value>，请检查拼写或尝试其他关键词。</value></data>
+  <data name="Reader_Path_Current" xml:space="preserve"><value>当前词条：{0}</value></data>
+  <data name="Reader_Path_Item" xml:space="preserve"><value>转到路径第 {0} 项：{1}</value></data>
+  <data name="Reader_Catalog_Ready" xml:space="preserve"><value>已就绪。</value></data>
+  <data name="Reader_Dictionaries_NoneEnabled" xml:space="preserve"><value>没有已启用的词典。</value></data>
+  <data name="Reader_Dictionaries_EnableInSettings" xml:space="preserve"><value>请在设置中启用或添加词典。</value></data>
+  <data name="Reader_Zoom_SaveFailed" xml:space="preserve"><value>缩放设置保存失败。</value></data>
+
+  <data name="SettingsWindow.Title" xml:space="preserve"><value>VDict 设置</value></data>
+  <data name="SettingsWindow_PaneTitle.Text" xml:space="preserve"><value>VDict 设置</value></data>
+  <data name="SettingsWindow_DictionariesItem.Content" xml:space="preserve"><value>词库</value></data>
+  <data name="SettingsWindow_DictionariesItem.AutomationProperties.Name" xml:space="preserve"><value>词库</value></data>
+  <data name="SettingsWindow_ReadingItem.Content" xml:space="preserve"><value>阅读与外观</value></data>
+  <data name="SettingsWindow_ReadingItem.AutomationProperties.Name" xml:space="preserve"><value>阅读与外观</value></data>
+  <data name="SettingsWindow_SecurityItem.Content" xml:space="preserve"><value>安全与兼容</value></data>
+  <data name="SettingsWindow_SecurityItem.AutomationProperties.Name" xml:space="preserve"><value>安全与兼容</value></data>
+  <data name="SettingsWindow_DataItem.Content" xml:space="preserve"><value>数据与维护</value></data>
+  <data name="SettingsWindow_DataItem.AutomationProperties.Name" xml:space="preserve"><value>数据与维护</value></data>
+  <data name="SettingsWindow_AboutItem.Content" xml:space="preserve"><value>关于</value></data>
+  <data name="SettingsWindow_AboutItem.AutomationProperties.Name" xml:space="preserve"><value>关于</value></data>
+  <data name="SettingsWindow_CancelOperationButton.Content" xml:space="preserve"><value>取消操作</value></data>
+  <data name="SettingsWindow_CancelOperationButton.AutomationProperties.Name" xml:space="preserve"><value>取消当前操作</value></data>
+  <data name="SettingsWindow_CancelButton.Content" xml:space="preserve"><value>取消</value></data>
+  <data name="SettingsWindow_CancelButton.AutomationProperties.Name" xml:space="preserve"><value>取消并关闭设置</value></data>
+  <data name="SettingsWindow_SaveButton.Content" xml:space="preserve"><value>保存</value></data>
+  <data name="SettingsWindow_SaveButton.AutomationProperties.Name" xml:space="preserve"><value>保存设置</value></data>
+
+  <data name="Reading_Title.Text" xml:space="preserve"><value>阅读与外观</value></data>
+  <data name="Reading_ApplicationAppearanceHeading.Text" xml:space="preserve"><value>应用外观</value></data>
+  <data name="Reading_LanguageSelector.Header" xml:space="preserve"><value>界面语言</value></data>
+  <data name="Reading_LanguageSystem.Content" xml:space="preserve"><value>跟随系统</value></data>
+  <data name="Reading_LanguageChinese.Content" xml:space="preserve"><value>中文（简体）</value></data>
+  <data name="Reading_LanguageEnglish.Content" xml:space="preserve"><value>English</value></data>
+  <data name="Reading_ThemeSelector.Header" xml:space="preserve"><value>应用主题</value></data>
+  <data name="Reading_ThemeSystem.Content" xml:space="preserve"><value>跟随系统</value></data>
+  <data name="Reading_ThemeLight.Content" xml:space="preserve"><value>浅色</value></data>
+  <data name="Reading_ThemeDark.Content" xml:space="preserve"><value>深色</value></data>
+  <data name="Reading_DictionaryContentHeading.Text" xml:space="preserve"><value>词典正文</value></data>
+  <data name="Reading_AppFontSize.Header" xml:space="preserve"><value>正文基础字号</value></data>
+  <data name="Reading_AppLineHeight.Header" xml:space="preserve"><value>正文基础行高</value></data>
+  <data name="Reading_LatinFont.Header" xml:space="preserve"><value>正文拉丁字体</value></data>
+  <data name="Reading_CjkFont.Header" xml:space="preserve"><value>正文中日韩字体</value></data>
+  <data name="Reading_Zoom.Header" xml:space="preserve"><value>默认正文缩放</value></data>
+  <data name="Reading_ContentWidth.Header" xml:space="preserve"><value>正文区域宽度（%）</value></data>
+  <data name="Reading_Brightness.Header" xml:space="preserve"><value>深色模式下降低词典亮度</value></data>
+  <data name="Reading_Brightness.OnContent" xml:space="preserve"><value>开</value></data>
+  <data name="Reading_Brightness.OffContent" xml:space="preserve"><value>关</value></data>
+  <data name="Reading_RestoreDefaults.Content" xml:space="preserve"><value>恢复正文显示默认值</value></data>
+  <data name="LanguageRestart_Title" xml:space="preserve"><value>重启以切换界面语言？</value></data>
+  <data name="LanguageRestart_Message" xml:space="preserve"><value>语言设置已保存。重启 VDict 后将在整个应用中生效。</value></data>
+  <data name="LanguageRestart_Now" xml:space="preserve"><value>立即重启</value></data>
+  <data name="LanguageRestart_Later" xml:space="preserve"><value>稍后</value></data>
+  <data name="LanguageRestart_Failed" xml:space="preserve"><value>VDict 无法自动重启（{0}）。请关闭并重新打开应用以应用语言。</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Common_Exit" xml:space="preserve"><value>退出</value></data>
+  <data name="Common_OperationFailed" xml:space="preserve"><value>操作失败</value></data>
+  <data name="Common_PreparingOperation" xml:space="preserve"><value>正在准备操作</value></data>
+  <data name="FilePicker_SettingsJson" xml:space="preserve"><value>VDict 设置（JSON）</value></data>
+  <data name="DebugTimelineWindow.Title" xml:space="preserve"><value>VDict Debug 时间线</value></data>
+  <data name="DebugTimeline_State.Text" xml:space="preserve"><value>实时采集</value></data>
+  <data name="DebugTimeline_StatePaused.Text" xml:space="preserve"><value>显示已暂停，采集继续</value></data>
+  <data name="DebugTimeline_Limit.Text" xml:space="preserve"><value>最多保留 500 条</value></data>
+  <data name="DebugTimeline_Pause.Content" xml:space="preserve"><value>暂停显示</value></data>
+  <data name="DebugTimeline_Resume.Content" xml:space="preserve"><value>恢复显示</value></data>
+  <data name="DebugTimeline_Clear.Content" xml:space="preserve"><value>清空</value></data>
+  <data name="DebugTimeline_Copy.Content" xml:space="preserve"><value>复制 TSV</value></data>
+  <data name="DebugTimeline_Time.Text" xml:space="preserve"><value>时间</value></data>
+  <data name="DebugTimeline_Elapsed.Text" xml:space="preserve"><value>累计 ms</value></data>
+  <data name="DebugTimeline_Interval.Text" xml:space="preserve"><value>间隔 ms</value></data>
+  <data name="DebugTimeline_Correlation.Text" xml:space="preserve"><value>关联</value></data>
+  <data name="DebugTimeline_Event.Text" xml:space="preserve"><value>事件</value></data>
+  <data name="DebugTimeline_Detail.Text" xml:space="preserve"><value>详情</value></data>
+  <data name="DebugTimeline_Footer.Text" xml:space="preserve"><value>时间戳在事件源处采集；窗口每 100ms 批量刷新。此窗口只用于 Debug 性能定位。</value></data>
+  <data name="Settings_AddDictionary_InvalidMdx" xml:space="preserve"><value>请选择存在的 MDX 文件。</value></data>
+  <data name="Settings_AddDictionary_Duplicate" xml:space="preserve"><value>该 MDX 文件已经在词典库中。</value></data>
+  <data name="Settings_AddDictionary_Failed" xml:space="preserve"><value>无法添加词典。请检查文件后重试。</value></data>
+  <data name="Settings_DictionaryCount" xml:space="preserve"><value>共 {0} 部</value></data>
+  <data name="Settings_Index_Available" xml:space="preserve"><value>索引缓存：可用</value></data>
+  <data name="Settings_Index_Missing" xml:space="preserve"><value>索引缓存：尚未创建</value></data>
+  <data name="Settings_Index_Stale" xml:space="preserve"><value>索引缓存：需要重建</value></data>
+  <data name="Settings_Index_Invalid" xml:space="preserve"><value>索引缓存：无效或 MDX 不可用</value></data>
+  <data name="Settings_AutoScript_NotFound" xml:space="preserve"><value>未发现与 MDX 同名的 JavaScript 文件。</value></data>
+  <data name="Settings_AutoScript_Found" xml:space="preserve"><value>自动发现：{0}</value></data>
+  <data name="Settings_Drag_AddMdx" xml:space="preserve"><value>添加 MDX 词典</value></data>
+  <data name="Settings_NetworkIsolation_Title" xml:space="preserve"><value>关闭网络隔离？</value></data>
+  <data name="Settings_NetworkIsolation_Message" xml:space="preserve"><value>关闭后词典可加载远程图片和脚本，也可能执行远程代码。仅对来源可信的词典关闭此选项。</value></data>
+  <data name="Settings_NetworkIsolation_KeepBlocking" xml:space="preserve"><value>保持阻止</value></data>
+  <data name="Settings_NetworkIsolation_Disable" xml:space="preserve"><value>确认关闭</value></data>
+  <data name="Settings_Import_Failed" xml:space="preserve"><value>无法导入设置文件。请确认这是有效的 VDict 设置文件。</value></data>
+  <data name="Settings_Export_Failed" xml:space="preserve"><value>无法导出设置文件。</value></data>
+  <data name="Settings_OpenLogs_Title" xml:space="preserve"><value>打开日志目录</value></data>
+  <data name="Settings_OpenLogs_Message" xml:space="preserve"><value>普通诊断日志会脱敏；详细诊断日志可能包含查询内容、资源 URI 和词典文件信息。复制或导出前请先检查内容。</value></data>
+  <data name="Settings_OpenLogs_Open" xml:space="preserve"><value>打开目录</value></data>
+  <data name="Settings_CacheUsage_Base" xml:space="preserve"><value>{0,-22} {1,10}  {2,6} 个文件</value></data>
+  <data name="Settings_CacheUsage_Runtime" xml:space="preserve"><value>  上限 {0} / 命中 {1} / 未命中 {2} / 淘汰 {3} / 超大拒绝 {4}</value></data>
+  <data name="Settings_CacheUsage_Error" xml:space="preserve"><value>  错误：不可用</value></data>
+  <data name="Settings_CacheInspect_Canceled" xml:space="preserve"><value>统计已取消</value></data>
+  <data name="Settings_CacheClear_Canceled" xml:space="preserve"><value>缓存清理已取消。</value></data>
+  <data name="Settings_BrowserCacheClear_Failed" xml:space="preserve"><value>浏览器缓存清理失败，现有数据保持不变。</value></data>
+  <data name="Settings_RebuildIndexes_Title" xml:space="preserve"><value>重建全部索引</value></data>
+  <data name="Settings_RebuildIndexes_Message" xml:space="preserve"><value>重建期间现有查询会暂停，完成后词典会自动重新加载。</value></data>
+  <data name="Settings_RebuildIndexes_Confirm" xml:space="preserve"><value>重建</value></data>
+  <data name="Settings_RebuildIndexes_Canceled" xml:space="preserve"><value>索引重建已取消；当前运行快照保持安全状态。</value></data>
+  <data name="Settings_OpenFolder_Failed" xml:space="preserve"><value>无法打开目录。</value></data>
+  <data name="Settings_Save_Failed" xml:space="preserve"><value>设置保存失败。</value></data>
+  <data name="Settings_Save_Canceled" xml:space="preserve"><value>设置保存已取消，编辑草稿仍然保留。</value></data>
+  <data name="Settings_Save_TooltipDirty" xml:space="preserve"><value>保存并应用更改</value></data>
+  <data name="Settings_Save_TooltipClean" xml:space="preserve"><value>没有未保存的更改</value></data>
+  <data name="Settings_Save_AlreadySaving" xml:space="preserve"><value>设置正在保存。</value></data>
+  <data name="Settings_Save_WindowUnavailable" xml:space="preserve"><value>窗口当前无法保存设置。</value></data>
+  <data name="Settings_Save_Conflict" xml:space="preserve"><value>设置已在其他操作中改变，冲突字段：{0}</value></data>
+  <data name="Settings_Save_CanceledDraftKept" xml:space="preserve"><value>设置保存已取消，草稿未丢失。</value></data>
+  <data name="Settings_Discard_Title" xml:space="preserve"><value>放弃未保存的更改？</value></data>
+  <data name="Settings_Discard_Message" xml:space="preserve"><value>设置草稿尚未保存。关闭窗口将丢弃这些更改。</value></data>
+  <data name="Settings_Discard_Confirm" xml:space="preserve"><value>放弃更改</value></data>
+  <data name="Settings_Discard_Continue" xml:space="preserve"><value>继续编辑</value></data>
+  <data name="Settings_Load_RecoveredBackup" xml:space="preserve"><value>主设置文件无法读取，已从最近一次备份恢复。</value></data>
+  <data name="Settings_Load_DefaultsAfterFailure" xml:space="preserve"><value>设置文件及备份均无法恢复，已使用默认设置；原文件已保留。</value></data>
+  <data name="Settings_Save_DiskChanged" xml:space="preserve"><value>磁盘设置已由另一个进程修改。</value></data>
+  <data name="Settings_Import_Invalid" xml:space="preserve"><value>导入的设置文件无效。</value></data>
+  <data name="Settings_Progress_Validating" xml:space="preserve"><value>正在规范化并验证设置…</value></data>
+  <data name="Settings_Progress_CheckingIndex" xml:space="preserve"><value>正在检查“{0}”的索引…</value></data>
+  <data name="Settings_Progress_CheckingDictionary" xml:space="preserve"><value>正在验证“{0}”…</value></data>
+  <data name="Settings_Progress_ReadyToCommit" xml:space="preserve"><value>设置准备完成，等待原子提交…</value></data>
+  <data name="Settings_Progress_CheckingFiles" xml:space="preserve"><value>正在验证“{0}”的文件与重复项…</value></data>
+  <data name="Settings_Progress_FilesValidated" xml:space="preserve"><value>文件与重复项验证完成。</value></data>
+  <data name="Settings_Progress_Committing" xml:space="preserve"><value>正在原子保存设置并切换词典快照…</value></data>
+  <data name="Settings_Progress_Complete" xml:space="preserve"><value>设置已保存并应用。</value></data>
+  <data name="Settings_Field_Zoom" xml:space="preserve"><value>缩放</value></data>
+  <data name="Settings_Field_CandidatePaneWidth" xml:space="preserve"><value>候选栏宽度</value></data>
+  <data name="Settings_FieldPatch_Conflict" xml:space="preserve"><value>{0}补丁与另一个进程的设置冲突。</value></data>
+  <data name="Settings_FieldPatch_RuntimeChanged" xml:space="preserve"><value>运行时设置已改变，请重试{0}保存。</value></data>
+  <data name="Settings_Commit_InvalidPlan" xml:space="preserve"><value>设置提交计划已失效。</value></data>
+  <data name="Settings_Commit_RuntimeChanged" xml:space="preserve"><value>运行时设置已改变，请重新准备提交。</value></data>
+
+  <data name="Validation_AppFontSize" xml:space="preserve"><value>字号必须介于 10 和 48 之间。</value></data>
+  <data name="Validation_AppLineHeight" xml:space="preserve"><value>行高必须介于 1.0 和 3.0 之间。</value></data>
+  <data name="Validation_ContentZoom" xml:space="preserve"><value>正文缩放必须介于 0.5 和 2.5 之间。</value></data>
+  <data name="Validation_ContentWidth" xml:space="preserve"><value>正文宽度必须介于 30% 和 100% 之间。</value></data>
+  <data name="Validation_CandidatePaneWidth" xml:space="preserve"><value>候选栏宽度必须介于 180 和 380 之间。</value></data>
+  <data name="Validation_DictionaryId" xml:space="preserve"><value>词典 ID 无效或重复。</value></data>
+  <data name="Validation_MdxRequired" xml:space="preserve"><value>必须指定 MDX 文件。</value></data>
+  <data name="Validation_DictionaryFontSize" xml:space="preserve"><value>词典字号必须介于 10 和 48 之间。</value></data>
+  <data name="Validation_DictionaryLineHeight" xml:space="preserve"><value>词典行高必须介于 1.0 和 3.0 之间。</value></data>
+  <data name="Validation_PathSyntax" xml:space="preserve"><value>文件路径语法无效：{0}</value></data>
+  <data name="Validation_JavaScriptFile" xml:space="preserve"><value>JavaScript 文件不存在或扩展名无效：{0}</value></data>
+  <data name="Validation_MdxFile" xml:space="preserve"><value>MDX 文件不存在或扩展名无效。</value></data>
+  <data name="Validation_MdxPathDuplicate" xml:space="preserve"><value>MDX 路径与“{0}”重复。</value></data>
+  <data name="Validation_MddFile" xml:space="preserve"><value>MDD 文件不存在或扩展名无效：{0}</value></data>
+  <data name="Validation_CssFile" xml:space="preserve"><value>CSS 文件不存在或扩展名无效：{0}</value></data>
+  <data name="Validation_MdxChangedDuringHash" xml:space="preserve"><value>计算 MDX 哈希期间文件发生变化，请重试。</value></data>
+  <data name="Validation_MdxContentDuplicate" xml:space="preserve"><value>MDX 内容与“{0}”重复。</value></data>
+
+  <data name="Catalog_ContentUnavailable" xml:space="preserve"><value>{0}：候选索引仍可用，但正文暂不支持读取。</value></data>
+  <data name="Catalog_DictionaryNotLoaded" xml:space="preserve"><value>词典未加载。</value></data>
+  <data name="Catalog_IndexNotFound" xml:space="preserve"><value>无法定位“{0}”的候选索引。</value></data>
+  <data name="Index_MdxNotFound" xml:space="preserve"><value>找不到 MDX 文件。</value></data>
+  <data name="Index_DestinationFailed" xml:space="preserve"><value>无法计算词典索引目标路径。</value></data>
+  <data name="Index_Progress_Indexing" xml:space="preserve"><value>正在索引词条</value></data>
+  <data name="Index_NoEntries" xml:space="preserve"><value>MDX 中没有可建立索引的词条。</value></data>
+  <data name="Index_CountValidationFailed" xml:space="preserve"><value>索引条目计数校验失败。</value></data>
+  <data name="Index_Progress_Complete" xml:space="preserve"><value>索引准备完成</value></data>
+  <data name="Maintenance_WebViewProfileRequired" xml:space="preserve"><value>WebView2 浏览数据必须由运行中的 Profile API 清理；未直接删除用户数据目录。</value></data>
+  <data name="Maintenance_Progress_ReleasingIndexes" xml:space="preserve"><value>正在暂停查询并释放索引句柄…</value></data>
+  <data name="Maintenance_RebuildFailed" xml:space="preserve"><value>索引重建失败。</value></data>
+  <data name="Maintenance_UnapprovedDirectory" xml:space="preserve"><value>拒绝清理未批准的目录：{0}</value></data>
+  <data name="Maintenance_ReparsePoint" xml:space="preserve"><value>拒绝清理 reparse point：{0}</value></data>
+  <data name="Maintenance_RestoreDictionaryStateFailed" xml:space="preserve"><value>恢复维护前词典状态失败。</value></data>
+  <data name="Settings_CacheClear_Failed" xml:space="preserve"><value>部分缓存数据无法清理。</value></data>
+  <data name="Settings_RebuildIndexes_Failed" xml:space="preserve"><value>部分词典索引无法重建。</value></data>
+  <data name="MainWindow_StartupFailed_Title" xml:space="preserve"><value>VDict 无法启动</value></data>
+  <data name="MainWindow_CurrentPath" xml:space="preserve"><value>当前路径</value></data>
+  <data name="MainWindow_CandidatePaneSaveFailed" xml:space="preserve"><value>候选栏宽度保存失败。</value></data>
+  <data name="Settings_OpenWindow_Failed" xml:space="preserve"><value>无法打开设置窗口。</value></data>
+  <data name="App_PortableDataDirectoryNotWritable" xml:space="preserve"><value>便携版数据目录不可写。请将 VDict 移动到具有写入权限的目录。</value></data>
+  <data name="App_StartupInitializationFailed" xml:space="preserve"><value>VDict 启动初始化失败。请查看日志了解详情。</value></data>
+
+  <data name="Dictionaries_Title.Text" xml:space="preserve"><value>词库</value></data>
+  <data name="Dictionaries_Description.Text" xml:space="preserve"><value>管理查询使用的词典、顺序和每部词典的兼容选项。</value></data>
+  <data name="Dictionaries_AddButton.AutomationProperties.Name" xml:space="preserve"><value>添加 MDX 词典</value></data>
+  <data name="Dictionaries_AddButtonText.Text" xml:space="preserve"><value>添加 MDX</value></data>
+  <data name="Dictionaries_MoveUpButton.Label" xml:space="preserve"><value>上移</value></data>
+  <data name="Dictionaries_MoveDownButton.Label" xml:space="preserve"><value>下移</value></data>
+  <data name="Dictionaries_RemoveButton.Label" xml:space="preserve"><value>移除所选词典</value></data>
+  <data name="Dictionaries_LibraryPanel.AutomationProperties.Name" xml:space="preserve"><value>词典库面板</value></data>
+  <data name="Dictionaries_LibraryHeading.Text" xml:space="preserve"><value>词典库</value></data>
+  <data name="Dictionaries_List.AutomationProperties.Name" xml:space="preserve"><value>词典列表</value></data>
+  <data name="Dictionaries_EmptyState.Text" xml:space="preserve"><value>尚未添加词典。请从上方命令栏添加 MDX 文件。</value></data>
+  <data name="Dictionaries_EditorPanel.AutomationProperties.Name" xml:space="preserve"><value>所选词典详情面板</value></data>
+  <data name="Dictionaries_EditorEmptyState.Text" xml:space="preserve"><value>请选择一部词典以查看和编辑详情。</value></data>
+  <data name="Dictionaries_SelectedHeading.Text" xml:space="preserve"><value>所选词典</value></data>
+  <data name="Dictionaries_BasicHeading.Text" xml:space="preserve"><value>基本信息</value></data>
+  <data name="Dictionaries_AccessHeading.Text" xml:space="preserve"><value>可用性与安全</value></data>
+  <data name="Dictionaries_EnabledToggle.Header" xml:space="preserve"><value>启用</value></data>
+  <data name="Dictionaries_EnabledToggle.OnContent" xml:space="preserve"><value>开</value></data>
+  <data name="Dictionaries_EnabledToggle.OffContent" xml:space="preserve"><value>关</value></data>
+  <data name="Dictionaries_BlockNetworkToggle.Header" xml:space="preserve"><value>阻止联网（推荐）</value></data>
+  <data name="Dictionaries_BlockNetworkToggle.OnContent" xml:space="preserve"><value>词典无法加载远程资源</value></data>
+  <data name="Dictionaries_BlockNetworkToggle.OffContent" xml:space="preserve"><value>词典可加载远程图片和脚本</value></data>
+  <data name="Dictionaries_DisplayName.Header" xml:space="preserve"><value>显示名称（留空使用词典名称）</value></data>
+  <data name="Dictionaries_MdxPath.Header" xml:space="preserve"><value>MDX 文件</value></data>
+  <data name="Dictionaries_AdvancedOptions.Header" xml:space="preserve"><value>高级选项</value></data>
+  <data name="Dictionaries_AdvancedOptions.AutomationProperties.Name" xml:space="preserve"><value>词典高级选项</value></data>
+  <data name="Dictionaries_ResourcesHeading.Text" xml:space="preserve"><value>资源文件</value></data>
+  <data name="Dictionaries_MddPaths.Header" xml:space="preserve"><value>MDD 文件（每行一个）</value></data>
+  <data name="Dictionaries_CssPaths.Header" xml:space="preserve"><value>CSS 文件（每行一个）</value></data>
+  <data name="Dictionaries_ScriptPaths.Header" xml:space="preserve"><value>JavaScript 文件（每行一个）</value></data>
+  <data name="Dictionaries_OverrideFont.Header" xml:space="preserve"><value>覆盖此词典的正文字体</value></data>
+  <data name="Dictionaries_OverrideFont.OnContent" xml:space="preserve"><value>开</value></data>
+  <data name="Dictionaries_OverrideFont.OffContent" xml:space="preserve"><value>关</value></data>
+  <data name="Dictionaries_OverrideTypography.Header" xml:space="preserve"><value>覆盖此词典的字号和行高</value></data>
+  <data name="Dictionaries_OverrideTypography.OnContent" xml:space="preserve"><value>开</value></data>
+  <data name="Dictionaries_OverrideTypography.OffContent" xml:space="preserve"><value>关</value></data>
+  <data name="Dictionaries_FontSize.Header" xml:space="preserve"><value>字号</value></data>
+  <data name="Dictionaries_LineHeight.Header" xml:space="preserve"><value>行高</value></data>
+  <data name="Dictionaries_LatinFont.Header" xml:space="preserve"><value>拉丁字体</value></data>
+  <data name="Dictionaries_CjkFont.Header" xml:space="preserve"><value>中日韩字体</value></data>
+  <data name="Dictionaries_AppearanceHeading.Text" xml:space="preserve"><value>正文外观</value></data>
+  <data name="Dictionaries_DarkModeSelector.Header" xml:space="preserve"><value>深色显示策略</value></data>
+  <data name="Dictionaries_DarkModeGlobal.Content" xml:space="preserve"><value>跟随应用主题</value></data>
+  <data name="Dictionaries_DarkModeOriginal.Content" xml:space="preserve"><value>保留词典原始颜色</value></data>
+  <data name="Dictionaries_DarkModeDark.Content" xml:space="preserve"><value>深色优化</value></data>
+  <data name="Dictionaries_RestoreAppearance.Content" xml:space="preserve"><value>恢复所选词典外观</value></data>
+  <data name="Dictionaries_DropHint.Text" xml:space="preserve"><value>也可把一个或多个 MDX 文件拖到词典列表；同名前缀 MDD、目录 CSS 与同名 JavaScript 会自动发现。</value></data>
+
+  <data name="Security_Title.Text" xml:space="preserve"><value>安全与兼容</value></data>
+  <data name="Security_Description.Text" xml:space="preserve"><value>词典正文的 HTTP/HTTPS、file、ftp、ws 和 wss 请求始终被阻止；本地脚本兼容模式不会授予联网权限。</value></data>
+  <data name="Security_ExternalLinks.Header" xml:space="preserve"><value>外部链接</value></data>
+  <data name="Security_ExternalLinksBlock.Content" xml:space="preserve"><value>阻止</value></data>
+  <data name="Security_ExternalLinksSystemBrowser.Content" xml:space="preserve"><value>在系统浏览器中打开</value></data>
+
+  <data name="Data_Title.Text" xml:space="preserve"><value>数据与维护</value></data>
+  <data name="Data_SettingsHeading.Text" xml:space="preserve"><value>设置数据</value></data>
+  <data name="Data_ImportSettings.Content" xml:space="preserve"><value>导入设置</value></data>
+  <data name="Data_ExportSettings.Content" xml:space="preserve"><value>导出设置</value></data>
+  <data name="Data_OpenDataFolder.Content" xml:space="preserve"><value>打开数据目录</value></data>
+  <data name="Data_OpenLogsFolder.Content" xml:space="preserve"><value>打开日志目录</value></data>
+  <data name="Data_CacheHeading.Text" xml:space="preserve"><value>缓存状态</value></data>
+  <data name="Data_InspectCache.Content" xml:space="preserve"><value>统计各类缓存</value></data>
+  <data name="Data_CacheNotInspected.Text" xml:space="preserve"><value>尚未统计。</value></data>
+  <data name="Data_DangerousOperations.Header" xml:space="preserve"><value>维护与危险操作</value></data>
+  <data name="Data_DangerousOperations.AutomationProperties.Name" xml:space="preserve"><value>维护与危险操作</value></data>
+  <data name="Data_DangerousOperationsWarning.Text" xml:space="preserve"><value>以下操作可能暂停查询、清理可重建数据或重置设置。执行前请确认当前工作已保存。</value></data>
+  <data name="Data_ClearTemporaryCache.Content" xml:space="preserve"><value>清理资源与临时缓存</value></data>
+  <data name="Data_ClearBrowserCache.Content" xml:space="preserve"><value>清理浏览器缓存</value></data>
+  <data name="Data_RebuildIndexes.Content" xml:space="preserve"><value>重建全部词典索引</value></data>
+  <data name="Data_RestoreDefaults.Content" xml:space="preserve"><value>恢复全部设置</value></data>
+
+  <data name="About_Title.Text" xml:space="preserve"><value>关于</value></data>
+  <data name="About_Technologies.Text" xml:space="preserve"><value>基于 .NET 10、WinUI 3、Windows App SDK 2.2 和 WebView2。</value></data>
+</root>

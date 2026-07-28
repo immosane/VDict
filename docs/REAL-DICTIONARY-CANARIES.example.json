@@ -1,0 +1,37 @@
+{
+  "dictionaries": [
+    {
+      "name": "Representative dictionary A",
+      "mdx_path": "D:\\path\\dictionary-a.mdx",
+      "css_paths": [
+        "D:\\path\\dictionary-a.css"
+      ],
+      "script_paths": [
+        "D:\\path\\dictionary-a.js"
+      ],
+      "local_script_mode": "standard",
+      "capabilities": [
+        "scripted",
+        "complex-css",
+        "multi-entry"
+      ],
+      "queries": [
+        "example"
+      ]
+    },
+    {
+      "name": "Representative dictionary B",
+      "mdx_path": "D:\\path\\dictionary-b.mdx",
+      "mdd_paths": [
+        "D:\\path\\dictionary-b.mdd"
+      ],
+      "capabilities": [
+        "mdd-audio",
+        "image-viewer"
+      ],
+      "queries": [
+        "example"
+      ]
+    }
+  ]
+}
