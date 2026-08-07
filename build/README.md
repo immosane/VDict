@@ -53,6 +53,9 @@ Phase 0A 流程先通过 `VDict.RemediationFixture` 生成并自校验离线词�
   主题、外部链接和词典高级暗色模式下拉框一次打开，检查词典库/详情面板在宽窗口
   左右分离、窄窗口上下分离，并输出对应尺寸的词典设置页截图。
 - `Run-UiSmoke.ps1`、`Run-SettingsPhase4Smoke.ps1`、`Probe-WebViewInput.ps1` 接收目标进程 ID。
+  `Run-SettingsPhase4Smoke.ps1` 还会验证设置字体与词典名称的即时脏状态检测，以及可编辑
+  TextBox、AutoSuggestBox 和 NumberBox 在回车或点击非交互空白区域后的提交与焦点结束行为；
+  测试最后通过取消关闭设置窗口，不持久化草稿。
 - `CreateOxfordSmokeSettings.ps1` 会读取调用者提供的设置文件中的真实词典路径；不得将这些路径或生成设置提交到仓库。
 
 脚本可能创建或删除 `artifacts/` 内的文件、启动/关闭便携版进程、移动窗口、注入测试输入和采集截图。运行 UI 冒烟前应确认不会干扰当前桌面会话。
