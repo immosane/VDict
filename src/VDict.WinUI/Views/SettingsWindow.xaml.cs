@@ -5,6 +5,7 @@ using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.Windows.AppLifecycle;
@@ -49,6 +50,8 @@ public sealed partial class SettingsWindow : Window
     private readonly SettingsSectionCache<FrameworkElement> _sectionCache;
     private readonly ObservableCollection<DictionarySettingsListItem> _dictionaryItems = [];
     private readonly PointerEventHandler _comboBoxPointerPressedHandler;
+    private readonly PointerEventHandler _settingsPointerPressedHandler;
+    private readonly KeyEventHandler _settingsKeyUpHandler;
     private CancellationTokenSource? _operationCts;
     private DictionarySettingsSection? _dictionarySection;
     private ReadingAppearanceSettingsSection? _readingSection;
@@ -94,6 +97,8 @@ public sealed partial class SettingsWindow : Window
         _readerHost = readerHost;
         _paths = paths;
         _comboBoxPointerPressedHandler = ComboBox_PointerPressed;
+        _settingsPointerPressedHandler = Root_PointerPressed;
+        _settingsKeyUpHandler = Root_KeyUp;
         InitializeComponent();
         Title = _localizer.Get("SettingsWindow.Title");
         pickerWindow.Attach(this);
@@ -114,6 +119,14 @@ public sealed partial class SettingsWindow : Window
         Closed += SettingsWindow_Closed;
         Root.SizeChanged += Root_SizeChanged;
         Root.ActualThemeChanged += Root_ActualThemeChanged;
+        Root.AddHandler(
+            UIElement.PointerPressedEvent,
+            _settingsPointerPressedHandler,
+            handledEventsToo: true);
+        Root.AddHandler(
+            UIElement.KeyUpEvent,
+            _settingsKeyUpHandler,
+            handledEventsToo: true);
         ViewModel.PropertyChanged += ViewModel_PropertyChanged;
         ViewModel.Session.PropertyChanged += Session_PropertyChanged;
         _installedFonts = fonts.GetInstalledFontFamilies();
@@ -248,6 +261,8 @@ public sealed partial class SettingsWindow : Window
                 dictionary.DictionaryList.Drop += DictionaryList_Drop;
                 dictionary.DictionaryEnabledToggle.Toggled += DictionaryEnabledToggle_Toggled;
                 dictionary.DictionaryBlockNetworkToggle.Toggled += DictionaryBlockNetworkToggle_Toggled;
+                dictionary.DictionaryDisplayNameBox.TextChanged +=
+                    DictionaryPendingTextBox_TextChanged;
                 dictionary.DictionaryDisplayNameBox.LostFocus +=
                     DictionaryDisplayNameBox_LostFocus;
                 dictionary.DictionaryOverrideFontToggle.Toggled +=
@@ -258,8 +273,12 @@ public sealed partial class SettingsWindow : Window
                     DictionaryFontSizeBox_ValueChanged;
                 dictionary.DictionaryLineHeightBox.ValueChanged +=
                     DictionaryLineHeightBox_ValueChanged;
+                dictionary.DictionaryLatinFontBox.TextChanged +=
+                    DictionaryPendingTextBox_TextChanged;
                 dictionary.DictionaryLatinFontBox.LostFocus +=
                     DictionaryLatinFontBox_LostFocus;
+                dictionary.DictionaryCjkFontBox.TextChanged +=
+                    DictionaryPendingTextBox_TextChanged;
                 dictionary.DictionaryCjkFontBox.LostFocus += DictionaryCjkFontBox_LostFocus;
                 dictionary.DictionaryDarkModeSelector.SelectionChanged +=
                     DictionaryDarkModeSelector_SelectionChanged;
@@ -273,7 +292,9 @@ public sealed partial class SettingsWindow : Window
                 WireComboBox(reading.ThemeSelector);
                 reading.AppFontSizeBox.ValueChanged += AppFontSizeBox_ValueChanged;
                 reading.AppLineHeightBox.ValueChanged += AppLineHeightBox_ValueChanged;
+                reading.LatinFontBox.TextChanged += LatinFontBox_TextChanged;
                 reading.LatinFontBox.LostFocus += LatinFontBox_LostFocus;
+                reading.CjkFontBox.TextChanged += CjkFontBox_TextChanged;
                 reading.CjkFontBox.LostFocus += CjkFontBox_LostFocus;
                 reading.ZoomBox.ValueChanged += ZoomBox_ValueChanged;
                 reading.ContentWidthBox.ValueChanged += ContentWidthBox_ValueChanged;
@@ -315,6 +336,8 @@ public sealed partial class SettingsWindow : Window
                 dictionary.DictionaryList.Drop -= DictionaryList_Drop;
                 dictionary.DictionaryEnabledToggle.Toggled -= DictionaryEnabledToggle_Toggled;
                 dictionary.DictionaryBlockNetworkToggle.Toggled -= DictionaryBlockNetworkToggle_Toggled;
+                dictionary.DictionaryDisplayNameBox.TextChanged -=
+                    DictionaryPendingTextBox_TextChanged;
                 dictionary.DictionaryDisplayNameBox.LostFocus -=
                     DictionaryDisplayNameBox_LostFocus;
                 dictionary.DictionaryOverrideFontToggle.Toggled -=
@@ -325,8 +348,12 @@ public sealed partial class SettingsWindow : Window
                     DictionaryFontSizeBox_ValueChanged;
                 dictionary.DictionaryLineHeightBox.ValueChanged -=
                     DictionaryLineHeightBox_ValueChanged;
+                dictionary.DictionaryLatinFontBox.TextChanged -=
+                    DictionaryPendingTextBox_TextChanged;
                 dictionary.DictionaryLatinFontBox.LostFocus -=
                     DictionaryLatinFontBox_LostFocus;
+                dictionary.DictionaryCjkFontBox.TextChanged -=
+                    DictionaryPendingTextBox_TextChanged;
                 dictionary.DictionaryCjkFontBox.LostFocus -= DictionaryCjkFontBox_LostFocus;
                 dictionary.DictionaryDarkModeSelector.SelectionChanged -=
                     DictionaryDarkModeSelector_SelectionChanged;
@@ -341,7 +368,9 @@ public sealed partial class SettingsWindow : Window
                 UnwireComboBox(reading.ThemeSelector);
                 reading.AppFontSizeBox.ValueChanged -= AppFontSizeBox_ValueChanged;
                 reading.AppLineHeightBox.ValueChanged -= AppLineHeightBox_ValueChanged;
+                reading.LatinFontBox.TextChanged -= LatinFontBox_TextChanged;
                 reading.LatinFontBox.LostFocus -= LatinFontBox_LostFocus;
+                reading.CjkFontBox.TextChanged -= CjkFontBox_TextChanged;
                 reading.CjkFontBox.LostFocus -= CjkFontBox_LostFocus;
                 reading.ZoomBox.ValueChanged -= ZoomBox_ValueChanged;
                 reading.ContentWidthBox.ValueChanged -= ContentWidthBox_ValueChanged;
@@ -384,6 +413,94 @@ public sealed partial class SettingsWindow : Window
         {
             _ = comboBox.CancelDirectManipulations();
         }
+    }
+
+    private void Root_PointerPressed(object sender, PointerRoutedEventArgs e)
+    {
+        if (e.OriginalSource is not DependencyObject source ||
+            FocusManager.GetFocusedElement(Root.XamlRoot) is not DependencyObject focused)
+        {
+            return;
+        }
+
+        Control? editor = FindEditableInput(focused);
+        if (editor is null ||
+            IsDescendantOrSelf(source, editor) ||
+            HasInteractiveAncestor(source))
+        {
+            return;
+        }
+
+        _ = SettingsScrollViewer.Focus(FocusState.Programmatic);
+        CommitPendingEdits(_activeSectionKey);
+    }
+
+    private void Root_KeyUp(object sender, KeyRoutedEventArgs e)
+    {
+        if (e.Key != VirtualKey.Enter ||
+            FocusManager.GetFocusedElement(Root.XamlRoot) is not DependencyObject focused ||
+            FindEditableInput(focused) is null)
+        {
+            return;
+        }
+
+        _ = SettingsScrollViewer.Focus(FocusState.Programmatic);
+        CommitPendingEdits(_activeSectionKey);
+    }
+
+    private static Control? FindEditableInput(DependencyObject source)
+    {
+        TextBox? editableTextBox = null;
+        for (DependencyObject? current = source;
+             current is not null;
+             current = VisualTreeHelper.GetParent(current))
+        {
+            switch (current)
+            {
+                case AutoSuggestBox autoSuggestBox:
+                    return autoSuggestBox;
+                case NumberBox numberBox:
+                    return numberBox;
+                case TextBox textBox when !textBox.IsReadOnly:
+                    editableTextBox ??= textBox;
+                    break;
+            }
+        }
+
+        return editableTextBox;
+    }
+
+    private static bool IsDescendantOrSelf(
+        DependencyObject source,
+        DependencyObject ancestor)
+    {
+        for (DependencyObject? current = source;
+             current is not null;
+             current = VisualTreeHelper.GetParent(current))
+        {
+            if (ReferenceEquals(current, ancestor))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static bool HasInteractiveAncestor(DependencyObject source)
+    {
+        for (DependencyObject? current = source;
+             current is not null;
+             current = VisualTreeHelper.GetParent(current))
+        {
+            if (current is ButtonBase or Selector or ToggleSwitch or TextBox or
+                AutoSuggestBox or NumberBox or ScrollBar or Thumb)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void RefreshSection(string key)
@@ -661,9 +778,21 @@ public sealed partial class SettingsWindow : Window
         UpdateApplicationAppearance(
             appearance => appearance with { LatinFontFamily = LatinFontBox.Text.Trim() });
 
+    private void LatinFontBox_TextChanged(
+        AutoSuggestBox sender,
+        AutoSuggestBoxTextChangedEventArgs args) =>
+        UpdateApplicationAppearance(
+            appearance => appearance with { LatinFontFamily = sender.Text.Trim() });
+
     private void CjkFontBox_LostFocus(object sender, RoutedEventArgs e) =>
         UpdateApplicationAppearance(
             appearance => appearance with { CjkFontFamily = CjkFontBox.Text.Trim() });
+
+    private void CjkFontBox_TextChanged(
+        AutoSuggestBox sender,
+        AutoSuggestBoxTextChangedEventArgs args) =>
+        UpdateApplicationAppearance(
+            appearance => appearance with { CjkFontFamily = sender.Text.Trim() });
 
     private void ZoomBox_ValueChanged(NumberBox sender, NumberBoxValueChangedEventArgs args)
     {
@@ -1055,6 +1184,14 @@ public sealed partial class SettingsWindow : Window
             {
                 _updatingControls = false;
             }
+        }
+    }
+
+    private void DictionaryPendingTextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        if (_selectedDictionaryId is { } dictionaryId)
+        {
+            CommitDictionaryPendingEdits(dictionaryId);
         }
     }
 
@@ -1556,6 +1693,8 @@ public sealed partial class SettingsWindow : Window
         _appWindow.Changed -= AppWindow_Changed;
         Root.SizeChanged -= Root_SizeChanged;
         Root.ActualThemeChanged -= Root_ActualThemeChanged;
+        Root.RemoveHandler(UIElement.PointerPressedEvent, _settingsPointerPressedHandler);
+        Root.RemoveHandler(UIElement.KeyUpEvent, _settingsKeyUpHandler);
         ViewModel.PropertyChanged -= ViewModel_PropertyChanged;
         ViewModel.Session.PropertyChanged -= Session_PropertyChanged;
         SettingsSectionHost.Content = null;
